@@ -1,0 +1,5 @@
+outs:
+- md5: c4aeeb4d90e9d8bf08f348a3e34b0b69
+  size: 21095333
+  hash: md5
+  path: perishable_goods_management.csv

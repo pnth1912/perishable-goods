@@ -1,0 +1,564 @@
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import seaborn as sns
+import datetime
+from pmdarima import auto_arima
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense, Dropout
+from tensorflow.keras.callbacks import EarlyStopping
+
+df=pd.read_csv("data\perishable_goods_management.csv")
+
+date_cols = ['transaction_date', 'expiration_date']
+df[date_cols] = df[date_cols].apply(pd.to_datetime) 
+
+#Build hierarchies
+def build_hierarchy(data_raw):
+    # Derive structure from data
+    region_store_map = (
+        data_raw.groupby('region')['store_id']
+        .apply(list)
+        .apply(lambda x: sorted(set(x)))
+        .to_dict()
+    )
+    regions    = sorted(region_store_map.keys())
+    all_stores = sorted(data_raw['store_id'].unique())
+
+    # Series order: Total, Regions, Stores
+    all_series = ['Total'] + regions + all_stores
+
+    # Pivot to wide format (date x series)
+    data_wide = data_raw.pivot_table(
+        index='transaction_date', columns='store_id',
+        values='units_sold', aggfunc='sum'
+    ).fillna(0)
+
+    # Add region aggregates
+    for region, stores in region_store_map.items():
+        data_wide[region] = data_wide[stores].sum(axis=1)
+
+    # Add total
+    data_wide['Total'] = data_wide[all_stores].sum(axis=1)
+
+    # Reorder columns
+    data_wide = data_wide[all_series]
+
+    # Build S matrix dynamically
+    # Rows = all series, Cols = bottom-level (stores only)
+    n_series  = len(all_series)
+    n_stores  = len(all_stores)
+    S         = np.zeros((n_series, n_stores), dtype=float)
+    store_idx = {s: i for i, s in enumerate(all_stores)}
+
+    for row_idx, series in enumerate(all_series):
+        if series == 'Total':
+            S[row_idx, :] = 1                          # Total = all stores
+        elif series in region_store_map:
+            for s in region_store_map[series]:
+                S[row_idx, store_idx[s]] = 1           # Region = its stores
+        elif series in store_idx:
+            S[row_idx, store_idx[series]] = 1          # Store = itself
+
+    return data_wide, S, all_series, all_stores, region_store_map
+
+## Hierarchy Tree
+def print_hierarchy_tree(region_store_map, product=None):
+    tag = f' [{product}]' if product else ''
+    print(f"\n  Hierarchy{tag}:")
+    print("  Total")
+    for i, (region, stores) in enumerate(sorted(region_store_map.items())):
+        rc = "└──" if i == len(region_store_map) - 1 else "├──"
+        print(f"    {rc} {region}")
+        for j, store in enumerate(sorted(stores)):
+            sc = "└──" if j == len(stores) - 1 else "├──"
+            print(f"         {sc} {store}")
+
+#Top-Down Proportions ──────────────────────────────────────────
+def compute_proportions(train_wide, all_series,
+                         region_store_map, method='weighted'):
+    """
+    Compute disaggregation proportions from TRAIN data only.
+    Proportions are at store level (bottom level only).
+    method: 'average' | 'recent' | 'weighted'
+    """
+    store_series = [s for s in all_series
+                    if s not in ['Total'] + list(region_store_map.keys())]
+    props = {}
+
+    for store in store_series:
+        ratios = train_wide[store] / train_wide['Total']
+
+        if method == 'average':
+            props[store] = ratios.mean()
+
+        elif method == 'recent':
+            props[store] = ratios.tail(6).mean()
+
+        elif method == 'weighted':
+            n       = len(ratios)
+            weights = np.arange(1, n + 1) / n
+            props[store] = np.average(ratios, weights=weights)
+
+    # Normalize so store proportions sum to 1
+    total_prop = sum(props.values())
+    props      = {k: v / total_prop for k, v in props.items()}
+
+    return props
+def topdown_disaggregate(total_forecast, props,
+                          all_series, region_store_map):
+    """
+    Disaggregate total forecast to all levels using store proportions.
+    Regions are computed by summing their stores (ensures coherence).
+    """
+    forecasts       = {'Total': total_forecast}
+    store_forecasts = {}
+
+    # Stores: direct proportion of total
+    for store, prop in props.items():
+        fc                     = total_forecast * prop
+        store_forecasts[store] = fc
+        forecasts[store]       = fc
+
+    # Regions: sum of member stores (guarantees coherence)
+    for region, stores in region_store_map.items():
+        forecasts[region] = sum(
+            store_forecasts[s] for s in stores
+        )
+
+    # Stack in correct series order
+    Y_hat = np.array([forecasts[n] for n in all_series])
+    return Y_hat, forecasts
+
+
+# ── 6. MinTrace Reconciliation ───────────────────────────────────────
+def mintrace_reconcile(S, Y_hat, Y_res):
+    """
+    MinTrace with shrinkage covariance estimator.
+    Y_hat : (n_series, h)
+    Y_res : (n_series, T)  — in-sample residuals from TRAIN
+    Falls back to OLS reconciliation if matrix is singular or NaN.
+    """
+    try:
+        # Drop any NaN/inf columns from residuals
+        Y_res = np.nan_to_num(Y_res, nan=0.0, posinf=0.0, neginf=0.0)
+ 
+        n, T     = Y_res.shape
+        W_sample = (Y_res @ Y_res.T) / T
+ 
+        # Shrinkage: blend sample covariance toward scaled identity
+        trace_W  = np.trace(W_sample)
+        shrink   = (trace_W / n) if trace_W > 0 else 1.0
+        W_shrink = W_sample + shrink * np.eye(n)
+ 
+        # Check condition number before inverting
+        cond = np.linalg.cond(W_shrink)
+        if cond > 1e12:
+            print("    ⚠ W matrix ill-conditioned, falling back to OLS reconciliation")
+            return ols_reconcile(S, Y_hat)
+ 
+        W_inv = np.linalg.inv(W_shrink)
+        StWS  = S.T @ W_inv @ S
+ 
+        cond2 = np.linalg.cond(StWS)
+        if cond2 > 1e12:
+            print("    ⚠ StWS matrix ill-conditioned, falling back to OLS reconciliation")
+            return ols_reconcile(S, Y_hat)
+ 
+        P      = S @ np.linalg.inv(StWS) @ S.T @ W_inv
+        Y_rec  = P @ Y_hat
+ 
+        # Final NaN guard — fall back if result contains NaN
+        if np.isnan(Y_rec).any():
+            print("    ⚠ NaN in reconciled output, falling back to OLS reconciliation")
+            return ols_reconcile(S, Y_hat)
+ 
+        return Y_rec
+ 
+    except np.linalg.LinAlgError as e:
+        print(f"    ⚠ LinAlgError: {e} — falling back to OLS reconciliation")
+        return ols_reconcile(S, Y_hat)
+ 
+ 
+def ols_reconcile(S, Y_hat):
+    """
+    OLS reconciliation fallback — no covariance estimation needed.
+    Formula: P = S(S'S)^-1 S'
+    Always produces coherent forecasts.
+    """
+    StS   = S.T @ S
+    P     = S @ np.linalg.inv(StS) @ S.T
+    Y_rec = P @ Y_hat
+    print("    ✓ OLS reconciliation applied")
+    return Y_rec
+
+# ── 7. Fit ARIMA for Total + Residuals ───────────────────────────────
+def fit_arima_series(series):
+    """Fit auto_arima and return model, forecast function, residuals."""
+    model     = auto_arima(series, seasonal=False,
+                            suppress_warnings=True,
+                            error_action='ignore')
+    residuals = series.values - model.predict_in_sample()
+    return model, residuals
+
+
+# ── 8. Full Top-Down Pipeline per Product ────────────────────────────
+def topdown_pipeline(data_wide, S, all_series, all_stores,
+                     region_store_map, train, test,
+                     n_periods, proportion_method='weighted'):
+    """
+    Steps:
+    1. Fit ARIMA on Total (train only) → base forecast
+    2. Compute proportions from train only
+    3. Disaggregate top-down → Y_hat for all series
+    4. Compute residuals from train (all series) for MinTrace
+    5. MinTrace reconciliation
+    6. Coherence check
+    7. Evaluate vs test
+    """
+
+    # ── Step 1: Forecast Total ───────────────────────────────────────
+    print(f"\n  [1/5] Forecasting Total with ARIMA...")
+    total_model, total_res = fit_arima_series(train['Total'])
+    total_fc = total_model.predict(n_periods=n_periods)
+    print(f"        ARIMA order : {total_model.order}")
+    print(f"        Forecast    : {np.round(total_fc, 1)}")
+    print(f"        Actual      : {np.round(test['Total'].values, 1)}")
+
+    # ── Step 2: Proportions from TRAIN only ─────────────────────────
+    print(f"\n  [2/5] Computing '{proportion_method}' proportions "
+          f"from train...")
+    props = compute_proportions(
+        train, all_series, region_store_map, method=proportion_method
+    )
+    print(f"        Store proportions (sum={sum(props.values()):.4f}):")
+    for k, v in sorted(props.items()):
+        print(f"          {k:20}: {v:.4f}")
+
+    # ── Step 3: Top-Down Disaggregation ─────────────────────────────
+    print(f"\n  [3/5] Disaggregating top-down...")
+    Y_hat, td_forecasts = topdown_disaggregate(
+        total_fc, props, all_series, region_store_map
+    )
+
+    # ── Step 4: Residuals for MinTrace (all series, train only) ─────
+    print(f"\n  [4/5] Fitting residual models (train only)...")
+    Y_res_list = []
+    for name in all_series:
+        if name == 'Total':
+            Y_res_list.append(total_res)
+        else:
+            _, res = fit_arima_series(train[name])
+            Y_res_list.append(res)
+ 
+    # Clean residuals — replace NaN/inf with 0
+    Y_res_list = [
+        np.nan_to_num(r, nan=0.0, posinf=0.0, neginf=0.0)
+        for r in Y_res_list
+    ]
+ 
+    # Align lengths (trim to shortest, minimum 10 points)
+    min_len = max(10, min(len(r) for r in Y_res_list))
+    min_len = min(min_len, min(len(r) for r in Y_res_list))
+    Y_res   = np.array([r[-min_len:] for r in Y_res_list])
+
+    # ── Step 5: MinTrace Reconciliation ─────────────────────────────
+    print(f"\n  [5/5] Applying MinTrace reconciliation...")
+    Y_rec = mintrace_reconcile(S, Y_hat, Y_res)
+
+    # ── Build result DataFrames ──────────────────────────────────────
+    test_dates = test.index.strftime('%Y-%m').tolist()
+    df_before  = pd.DataFrame(
+        Y_hat, index=all_series, columns=test_dates
+    ).round(1)
+    df_after   = pd.DataFrame(
+        Y_rec, index=all_series, columns=test_dates
+    ).round(1)
+
+    return df_before, df_after
+
+
+# ── 9. Coherence Check ───────────────────────────────────────────────
+def coherence_check(df, all_stores, region_store_map, label=''):
+    print(f"\n  === Coherence Check {label}===")
+    print(f"  {'Month':12} {'Total':>8} {'RegSum':>8} "
+          f"{'StoreSum':>10} {'OK':>5}")
+    print(f"  {'-'*48}")
+    all_ok = True
+
+    def scalar(val):
+        """Safely extract a single float from a scalar, Series, or array."""
+        arr = np.array(val, dtype=float).flatten()
+        return float(arr[0]) if arr.size == 1 else float(arr.sum())
+
+    for month in df.columns:
+        total     = scalar(df.loc['Total', month])
+        reg_sum   = sum(scalar(df.loc[r, month])
+                        for r in region_store_map.keys())
+        store_sum = float(df.loc[all_stores, month].astype(float).values.sum())
+        ok        = (np.isclose(total, store_sum, atol=1.0) and
+                     np.isclose(total, reg_sum,   atol=1.0))
+        if not ok:
+            all_ok = False
+        flag = '✅' if ok else '❌'
+        print(f"  {str(month):12} {total:>8.1f} {reg_sum:>8.1f} "
+              f"{store_sum:>10.1f} {flag:>5}")
+    return all_ok
+
+
+# ── 10. Evaluation ───────────────────────────────────────────────────
+def evaluate(df_before, df_after, test, all_series):
+    from sklearn.metrics import mean_absolute_error
+
+    rows = []
+    for name in all_series:
+        if name not in test.columns:
+            continue
+        actual  = test[name].values
+        before  = df_before.loc[name].values.astype(float)
+        after   = df_after.loc[name].values.astype(float)
+       # Align lengths
+        min_len = min(len(actual), len(before), len(after))
+        actual  = actual[:min_len]
+        before  = before[:min_len]
+        after   = after[:min_len]
+ 
+        # Replace NaN/inf with series mean as safe fallback
+        series_mean = np.nanmean(actual) if np.nanmean(actual) > 0 else 1.0
+        before = np.where(np.isfinite(before), before, series_mean)
+        after  = np.where(np.isfinite(after),  after,  series_mean)
+ 
+        # Avoid division by zero in MAPE
+        denom  = np.where(actual == 0, 1.0, actual)
+ 
+        mae_b  = mean_absolute_error(actual, before)
+        mae_a  = mean_absolute_error(actual, after)
+        mape_b = np.mean(np.abs((actual - before) / denom)) * 100
+        mape_a = np.mean(np.abs((actual - after)  / denom)) * 100
+ 
+        rows.append({
+            'series':      name,
+            'mae_before':  round(mae_b,  2),
+            'mae_after':   round(mae_a,  2),
+            'mape_before': round(mape_b, 2),
+            'mape_after':  round(mape_a, 2),
+            'improved':    mae_a < mae_b
+        })
+    return pd.DataFrame(rows)
+ 
+ 
+
+
+
+# ── 11. Master Pipeline ──────────────────────────────────────────────
+def load_and_run(filepath_or_df, n_periods=3, test_periods=90,
+                 proportion_method='weighted'):
+    """
+    Master entry point.
+    Accepts filepath (.csv/.xlsx) or a DataFrame directly.
+    Required columns: date, region, store, product, sales
+    """
+
+    # Load
+    if isinstance(filepath_or_df, pd.DataFrame):
+        data_raw = filepath_or_df.copy()
+    elif filepath_or_df.endswith('.csv'):
+        data_raw = pd.read_csv(filepath_or_df, parse_dates=['transaction_date'])
+    elif filepath_or_df.endswith(('.xlsx', '.xls')):
+        data_raw = pd.read_excel(filepath_or_df, parse_dates=['transaction_date'])
+    else:
+        raise ValueError("Must be DataFrame, .csv, or .xlsx")
+
+    # Validate
+    required = {'transaction_date', 'region', 'store_id', 'product_name', 'units_sold'}
+    missing  = required - set(data_raw.columns)
+    if missing:
+        raise ValueError(f"Missing columns: {missing}")
+
+    products = sorted(data_raw['product_name'].unique())
+    regions  = sorted(data_raw['region'].unique())
+    stores   = sorted(data_raw['store_id'].unique())
+
+    print("=" * 60)
+    print("  TOP-DOWN HIERARCHICAL FORECAST WITH MINTRACE")
+    print("=" * 60)
+    print(f"  Rows        : {len(data_raw):,}")
+    print(f"  Date range  : {data_raw['transaction_date'].min().date()} "
+          f"to {data_raw['transaction_date'].max().date()}")
+    print(f"  Products    : {products}")
+    print(f"  Regions     : {regions}")
+    print(f"  Stores      : {stores}")
+    print(f"  Proportion  : {proportion_method}")
+    print(f"  Test periods: {test_periods}")
+
+    all_results   = {}
+    all_metrics   = []
+    summary_rows  = []
+
+    for prod in products:
+        print(f"\n{'#'*60}")
+        print(f"  PRODUCT: {prod}")
+        print(f"{'#'*60}")
+
+        prod_data = data_raw[data_raw['product_name'] == prod].copy()
+
+        # Build hierarchy dynamically from this product's data
+        data_wide, S, all_series, all_stores, region_store_map = \
+            build_hierarchy(prod_data)
+
+        print_hierarchy_tree(region_store_map, product=prod)
+
+        # Print S matrix
+        print(f"\n  S matrix ({len(all_series)} series x "
+              f"{len(all_stores)} stores):")
+        S_df = pd.DataFrame(S, index=all_series, columns=all_stores)
+        print(S_df.to_string(
+
+        ))
+
+        # Train / test split
+        train = data_wide.iloc[:-test_periods]
+        test  = data_wide.iloc[-test_periods:]
+        print(f"\n  Train: {train.index[0].date()} → "
+              f"{train.index[-1].date()} ({len(train)} periods)")
+        print(f"  Test : {test.index[0].date()}  → "
+              f"{test.index[-1].date()}  ({len(test)} periods)")
+
+        # Run pipeline
+        df_before, df_after = topdown_pipeline(
+            data_wide, S, all_series, all_stores,
+            region_store_map, train, test,
+            n_periods=test_periods,
+            proportion_method=proportion_method
+        )
+
+        # Coherence checks
+        coherence_check(df_before, all_stores, region_store_map,
+                         label='[Before Reconciliation] ')
+        coherence_check(df_after,  all_stores, region_store_map,
+                         label='[After Reconciliation]  ')
+
+        # Forecast vs Actual table
+        test_dates = test.index.strftime('%Y-%m').tolist()
+        print(f"\n  === Forecast vs Actual [{prod}] ===")
+        header = f"  {'Series':22}"
+        for d in test_dates:
+            header += f"  {'Fc':>8} {'Act':>8}"
+        print(header)
+        print(f"  {'-'*70}")
+        for name in all_series:
+            if name not in test.columns:
+                continue
+            row = f"  {name:22}"
+            for d in test_dates:
+                fc  = float(np.array(df_after.loc[name, d]).flatten()[0])
+                act = round(
+                    test.loc[test.index[test_dates.index(d)], name], 1
+                )
+                row += f"  {fc:>8.1f} {act:>8.1f}"
+            print(row)
+
+        # Metrics
+        metrics = evaluate(df_before, df_after, test, all_series)
+        metrics.insert(0, 'product_name', prod)
+
+        print(f"\n  === Accuracy Metrics [{prod}] ===")
+        print(f"  {'Series':22} {'MAE↓bef':>9} {'MAE↓aft':>9} "
+              f"{'MAPE↓bef':>10} {'MAPE↓aft':>10} {'Better':>8}")
+        print(f"  {'-'*73}")
+        for _, row in metrics.iterrows():
+            print(f"  {row['series']:22} "
+                  f"{row['mae_before']:>9.2f} "
+                  f"{row['mae_after']:>9.2f} "
+                  f"{row['mape_before']:>9.2f}% "
+                  f"{row['mape_after']:>9.2f}% "
+                  f"  {'✅' if row['improved'] else '——':>6}")
+
+        pct = metrics['improved'].mean() * 100
+        print(f"\n  MinTrace improved {pct:.0f}% of series for {prod}")
+        print(f"  Avg MAPE before : {metrics['mape_before'].mean():.2f}%")
+        print(f"  Avg MAPE after  : {metrics['mape_after'].mean():.2f}%")
+
+        all_results[prod] = {
+            'before':  df_before,
+            'after':   df_after,
+            'metrics': metrics
+        }
+        all_metrics.append(metrics)
+        summary_rows.append({
+            'product':       prod,
+            'avg_mape_before': round(metrics['mape_before'].mean(), 2),
+            'avg_mape_after':  round(metrics['mape_after'].mean(), 2),
+            'pct_improved':    round(pct, 0)
+        })
+
+    # Overall summary
+    print(f"\n{'='*60}")
+    print("  OVERALL SUMMARY")
+    print(f"{'='*60}")
+    summary_df = pd.DataFrame(summary_rows)
+    print(summary_df.to_string(index=False))
+
+    all_metrics_df = pd.concat(all_metrics, ignore_index=True)
+    print(f"\n  Grand avg MAPE before : "
+          f"{all_metrics_df['mape_before'].mean():.2f}%")
+    print(f"  Grand avg MAPE after  : "
+          f"{all_metrics_df['mape_after'].mean():.2f}%")
+
+    return all_results
+
+data_raw = df
+results  = load_and_run(
+    data_raw,
+    n_periods=30,
+    test_periods=90,
+    proportion_method='weighted'   # 'average' | 'recent' | 'weighted'
+)
+
+import pandas as pd
+
+# ── Historical ────────────────────────────────────────────────────────
+hist_rows = []
+for prod, res in results.items():
+    prod_data = df[df['product_name'] == prod].copy()
+    hist_rows.append(prod_data)
+
+df_historical = pd.concat(hist_rows, ignore_index=True)
+
+# ── Forecast ──────────────────────────────────────────────────────────
+fc_rows = []
+for prod, res in results.items():
+    df_after = res['after']   # series x dates
+
+    for series_name in df_after.index:
+        for date_str, fc_val in df_after.loc[series_name].items():
+            fc_rows.append({
+                'transaction_date':        pd.to_datetime(date_str),
+                'product_name':     prod,
+                'series_name': series_name,
+                'forecast':    round(float(fc_val), 2),
+            })
+
+df_forecast = pd.DataFrame(fc_rows)
+
+# ── Metrics ───────────────────────────────────────────────────────────
+metric_rows = []
+for prod, res in results.items():
+    df_m = res['metrics'].copy()
+    df_m.insert(0, 'product_name', prod)
+    metric_rows.append(df_m)
+
+df_metrics = pd.concat(metric_rows, ignore_index=True)
+
+# ── Preview ───────────────────────────────────────────────────────────
+print(df_historical.shape)
+print(df_forecast.shape)
+print(df_metrics.shape)
+
+print(df_historical.head())
+print(df_forecast.head())
+print(df_metrics.head())

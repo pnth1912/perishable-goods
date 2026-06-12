@@ -1,0 +1,4 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = C:\Users\DELL\kaggle_perishable_goods\dvc-remote
