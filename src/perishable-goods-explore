@@ -9,7 +9,7 @@ import statsmodels.api as sm
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.seasonal import STL
 
-pg_df=pd.read_csv("C:/Users/DELL/kaggle_perishable_goods/data/perishable_goods_management.csv")
+pg_df=pd.read_csv("kaggle_perishable_goods/data/perishable_goods_management.csv")
 
 #convert dates to datetime format
 date_cols = ['transaction_date', 'expiration_date']
