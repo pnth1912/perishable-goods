@@ -628,3 +628,23 @@ for product in df_combined['product_name'].unique():
     plt.show()
     
 
+import pickle
+
+with open('forecast_results.pkl', 'wb') as f:
+    pickle.dump({
+        'results':       results,
+        'df_forecast':   df_forecast,
+        'df_historical': df_historical,
+        'df_metrics':    df_metrics,
+        'fc_plot':       fc_plot,
+        'df_combined':   df_combined,
+        'df_forecast_stores': df_forecast_stores
+    }, f)
+
+print("Saved to forecast_results.pkl")
+
+
+# df_historical.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\ouput\historical.csv', index=False)
+# df_forecast.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\ouput\forecast.csv', index=False)
+# df_metrics.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\ouput\metrics.csv', index=False)
+# fc_plot.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\ouput\fc_plot.csv', index=False)
