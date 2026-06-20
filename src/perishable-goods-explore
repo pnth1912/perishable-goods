@@ -133,4 +133,4 @@ combined = pd.concat(
     ignore_index=True
 )
 
-combined.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\data\product_ts.csv', index=False)
+
