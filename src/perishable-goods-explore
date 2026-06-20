@@ -1,0 +1,136 @@
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import seaborn as sns
+import datetime
+import statsmodels.api as sm
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.seasonal import STL
+
+pg_df=pd.read_csv("C:/Users/DELL/kaggle_perishable_goods/data/perishable_goods_management.csv")
+
+#convert dates to datetime format
+date_cols = ['transaction_date', 'expiration_date']
+pg_df[date_cols] = pg_df[date_cols].apply(pd.to_datetime) 
+
+
+# Split the original dataframe by product name (keep ALL columns)
+product_dfs = {
+    product: group.sort_values('transaction_date').reset_index(drop=True)
+    for product, group in pg_df.groupby('product_name')
+}
+
+# Create grouped time series for each product
+product_ts = {}
+
+for product, product_df in product_dfs.items():
+
+    ts = (
+        product_df
+        .groupby(['transaction_date', 'store_id', 'region'], as_index=False)
+        .agg(units_sold=('units_sold', 'sum'))
+        .sort_values('transaction_date')
+    )
+
+    product_ts[product] = ts
+
+
+fig, axes = plt.subplots(len(product_dfs), 2, figsize=(12, 4 * len(product_dfs)))
+
+for i, (product, product_df) in enumerate(product_dfs.items()):
+    ts = product_df['units_sold'] 
+    ax_hist, ax_box = axes[i] if len(product_dfs) > 1 else axes
+
+    # Histogram
+    ax_hist.hist(ts, bins=30, edgecolor='white', color='steelblue', alpha=0.8)
+    ax_hist.axvline(ts.mean(), color='red', linestyle='--', label=f'Mean: {ts.mean():.1f}')
+    ax_hist.axvline(ts.median(), color='orange', linestyle='--', label=f'Median: {ts.median():.1f}')
+    ax_hist.legend(fontsize=8)
+    pct_zeros = (ts == 0).mean() * 100
+    ax_hist.set_title(f'{product} — Distribution (zeros: {pct_zeros:.1f}%)')
+    ax_hist.set_xlabel('Sales')
+    ax_hist.set_ylabel('Frequency')
+
+    # Boxplot
+    ax_box.boxplot(ts, vert=True, patch_artist=True,
+                   boxprops=dict(facecolor='steelblue', alpha=0.6))
+    ax_box.set_title(f'{product} — Boxplot')
+    ax_box.set_xlabel('Sales')
+
+plt.tight_layout()
+plt.show()
+    
+summary = (
+    pg_df.groupby(['product_name', 'store_id', 'region'])
+      .agg(
+          count=('units_sold', 'sum'),
+          mean_sales=('units_sold', 'mean'),
+          variance_sales=('units_sold', 'var'),
+          std_sales=('units_sold', 'std')
+      )
+      .reset_index()
+)
+
+print(summary)
+#STL decomposition
+
+decompositions = {}
+
+for product, ts in product_ts.items():
+    ts_decomp = (
+        ts.copy()
+        .assign(transaction_date=lambda x: pd.to_datetime(x['transaction_date']))
+        .groupby('transaction_date')['units_sold'].sum()
+        .asfreq('D')
+        .fillna(0)
+        .to_frame(name='units_sold')  # back to DataFrame
+)
+
+# then use ts_decomp['sales'] as before
+    stl = STL(ts_decomp['units_sold'], period=7, robust=True)
+
+
+    result = stl.fit()
+    residuals = result.resid
+    decompositions[product] = result
+
+    fig = result.plot()
+    fig.set_size_inches(12, 8)
+
+    for ax in fig.axes:
+        ax.set_xlabel("Date")
+        ax.xaxis.set_major_formatter(
+            mdates.DateFormatter("%b %Y")
+        )
+        ax.xaxis.set_major_locator(
+            mdates.AutoDateLocator()
+        )
+
+        plt.setp(
+            ax.get_xticklabels(),
+            rotation=45,
+            ha="right"
+        )
+
+    # Overall title at bottom
+    fig.text(
+        0.5,
+        0.01,
+        f"{product} STL Decomposition",
+        ha="center",
+        fontsize=14,
+        fontweight="bold"
+    )
+
+    plt.tight_layout(rect=[0, 0.04, 1, 1])
+    plt.show()
+    
+
+combined = pd.concat(
+    [df.assign(product_name=product) for product, df in product_ts.items()],
+    ignore_index=True
+)
+
+combined.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\data\product_ts.csv', index=False)
