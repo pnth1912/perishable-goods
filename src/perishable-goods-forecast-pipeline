@@ -10,7 +10,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 #── 1. Load data
-df=pd.read_csv('kaggle_perishable_goods\data\product_ts.csv')
+df = pd.read_csv("../data/product_ts.csv")
 #── 2.Reformat transaction date
 date_cols = ['transaction_date']
 df[date_cols] = df[date_cols].apply(pd.to_datetime) 
@@ -384,7 +384,7 @@ def load_and_run(filepath_or_df, n_periods=3, test_periods=90,
     """
     Master entry point.
     Accepts filepath (.csv/.xlsx) or a DataFrame directly.
-    Required columns: date, region, store, product, sales
+    Required columns: date, region, store, product, units_sold
     """
 
     # Load
@@ -545,7 +545,7 @@ results  = load_and_run(
 import pandas as pd
 
 # ── Historical ────────────────────────────────────────────────────────
-pg_org=pd.read_csv("kaggle_perishable_goods/data/perishable_goods_management.csv")
+pg_org=pd.read_csv("../data/perishable_goods_management.csv")
 hist_rows = []
 df_historical = (
     pg_org[pg_org['product_name'].isin(results.keys())]
@@ -597,7 +597,7 @@ df_metrics = pd.concat(metric_rows, ignore_index=True)
 
 
 
-# Plot total historical and forecast sales
+# Plot total historical and forecast units_sold
 
 df_historical['transaction_date'] = pd.to_datetime(df_historical['transaction_date'])
 df_forecast['type'] = 'forecast'
@@ -630,7 +630,7 @@ for product in df_combined['product_name'].unique():
 
 import pickle
 
-with open('forecast_results.pkl', 'wb') as f:
+with open('../output/forecast_results.pkl', 'wb') as f:
     pickle.dump({
         'results':       results,
         'df_forecast':   df_forecast,
@@ -644,7 +644,3 @@ with open('forecast_results.pkl', 'wb') as f:
 print("Saved to forecast_results.pkl")
 
 
-# df_historical.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\ouput\historical.csv', index=False)
-# df_forecast.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\ouput\forecast.csv', index=False)
-# df_metrics.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\ouput\metrics.csv', index=False)
-# fc_plot.to_csv(r'C:\Users\DELL\kaggle_perishable_goods\ouput\fc_plot.csv', index=False)
