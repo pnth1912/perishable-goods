@@ -66,9 +66,9 @@ summary = (
     pg_df.groupby(['product_name', 'store_id', 'region'])
       .agg(
           count=('units_sold', 'sum'),
-          mean_sales=('units_sold', 'mean'),
-          variance_sales=('units_sold', 'var'),
-          std_sales=('units_sold', 'std')
+          mean_Demand=('units_sold', 'mean'),
+          variance_Demand=('units_sold', 'var'),
+          std_Demand=('units_sold', 'std')
       )
       .reset_index()
 )
@@ -88,7 +88,7 @@ for product, ts in product_ts.items():
         .to_frame(name='units_sold')  # back to DataFrame
 )
 
-# then use ts_decomp['sales'] as before
+# then use ts_decomp['Sales'] as before
     stl = STL(ts_decomp['units_sold'], period=7, robust=True)
 
 
@@ -133,4 +133,4 @@ combined = pd.concat(
     ignore_index=True
 )
 
-
+combined.to_csv(r'../data/product_ts.csv', index=False)
