@@ -1,0 +1,220 @@
+import pandas as pd
+import numpy as np
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.impute import SimpleImputer
+from sklearn.ensemble import HistGradientBoostingRegressor
+from sklearn.model_selection import cross_val_score
+
+# 1. Aggregate product + store performance
+product_store_summary = (
+    df.groupby(
+        ["product_name","store_id"],
+        as_index=False
+    )
+    .agg(
+        total_units_sold=("units_sold","sum"),
+        total_units_wasted=("units_wasted","sum"),
+        total_revenue=("revenue","sum"),
+        total_profit=("profit","sum"),
+        markdown_units_sold=(
+            "units_sold",
+            lambda x: x[df.loc[x.index,"markdown_applied"]==1].sum()
+        ),
+        markdown_transactions=("markdown_applied","sum"),
+        avg_base_price=("base_price","mean"),
+        avg_cost_price=("cost_price","mean"),
+        avg_selling_price=("selling_price","mean"),
+        avg_discount_pct=("discount_pct","mean"),
+        total_initial_quantity=("initial_quantity","sum"),
+        avg_days_until_expiry=("days_until_expiry","mean"),
+        avg_spoilage_risk=("spoilage_risk","mean"),
+        category=("category","first"),
+        region=("region","first"),
+        supplier_id=("supplier_id","first")
+    )
+)
+
+# 2. Create target
+product_store_summary["markdown_sales_rate"] = (
+    product_store_summary["markdown_units_sold"]
+    /
+    product_store_summary["total_units_sold"]
+).fillna(0)
+
+product_store_summary["waste_rate"] = (
+    product_store_summary["total_units_wasted"]
+    /
+    (
+        product_store_summary["total_units_sold"]
+        +
+        product_store_summary["total_units_wasted"]
+    )
+).fillna(0)
+
+# 3. Features
+markdown_features = [
+    "product_name",
+    "store_id",
+    "category",
+    "region",
+    "supplier_id",
+    "avg_base_price",
+    "avg_cost_price",
+    "avg_selling_price",
+    "avg_discount_pct",
+    "total_initial_quantity",
+    "avg_days_until_expiry",
+    "avg_spoilage_risk",
+    "waste_rate"
+]
+
+categorical_features = [
+    "product_name",
+    "store_id",
+    "category",
+    "region",
+    "supplier_id"
+]
+
+numeric_features = [
+    "avg_base_price",
+    "avg_cost_price",
+    "avg_selling_price",
+    "avg_discount_pct",
+    "total_initial_quantity",
+    "avg_days_until_expiry",
+    "avg_spoilage_risk",
+    "waste_rate"
+]
+
+# 4. Preprocessor
+preprocessor = ColumnTransformer(
+    [
+        (
+            "cat",
+            Pipeline([
+                ("imputer",SimpleImputer(strategy="most_frequent")),
+                ("encoder",OneHotEncoder(
+                    handle_unknown="ignore",
+                    sparse_output=False
+                ))
+            ]),
+            categorical_features
+        ),
+        (
+            "num",
+            SimpleImputer(strategy="median"),
+            numeric_features
+        )
+    ]
+)
+
+# 5. Model
+markdown_rate_model = Pipeline([
+    ("preprocessor",preprocessor),
+    ("model",HistGradientBoostingRegressor(
+        max_iter=150,
+        learning_rate=0.05,
+        max_leaf_nodes=31,
+        random_state=42
+    ))
+])
+
+# 6. Cross validation
+X = product_store_summary[markdown_features]
+y = product_store_summary["markdown_sales_rate"]
+
+cv_scores = cross_val_score(
+    markdown_rate_model,
+    X,
+    y,
+    cv=5,
+    scoring="r2"
+)
+
+print("CV R2:",cv_scores)
+print("Average CV R2:",cv_scores.mean())
+
+# 7. Train final model
+markdown_rate_model.fit(X,y)
+
+# 8. Predict markdown effectiveness
+product_store_summary["predicted_markdown_sales_rate"] = np.clip(
+    markdown_rate_model.predict(
+        product_store_summary[markdown_features]
+    ),
+    0,
+    1
+)
+
+# 9. Markdown simulation
+discount_levels = np.arange(0,0.55,0.05)
+simulation_results = []
+
+for discount in discount_levels:
+    sim = product_store_summary.copy()
+    sim["discount_pct"] = discount
+
+    markdown_rate = sim["predicted_markdown_sales_rate"]
+
+    predicted_sales = (
+        sim["total_units_sold"]
+        *
+        (1 + markdown_rate * discount)
+    )
+
+    predicted_sales = np.minimum(
+        predicted_sales,
+        sim["total_initial_quantity"]
+    )
+
+    predicted_waste = (
+        sim["total_units_wasted"]
+        *
+        (1 - markdown_rate * discount)
+    )
+
+    predicted_waste = np.maximum(
+        predicted_waste,
+        0
+    )
+
+    selling_price = (
+        sim["avg_base_price"]
+        *
+        (1-discount)
+    )
+
+    revenue = selling_price * predicted_sales
+    cost_sales = sim["avg_cost_price"] * predicted_sales
+    waste_cost = sim["avg_cost_price"] * predicted_waste
+
+    profit = (
+        revenue
+        -
+        cost_sales
+        -
+        waste_cost
+    )
+
+    simulation_results.append(
+        pd.DataFrame({
+            "product_name":sim["product_name"],
+            "store_id":sim["store_id"],
+            "discount_pct":discount,
+            "predicted_sales":predicted_sales,
+            "predicted_waste":predicted_waste,
+            "revenue":revenue,
+            "profit":profit
+        })
+    )
+
+# 10. Best markdown recommendation
+markdown_results = pd.concat(
+    simulation_results,
+    ignore_index=True
+)
+
+markdown_results.to_csv(r'../output/markdown_simulation_results.csv', index=False)

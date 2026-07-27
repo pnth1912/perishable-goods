@@ -1,0 +1,1891 @@
+transaction_date,product_name,forecast,type
+2024-12-30,Chicken,440.2,forecast
+2024-12-31,Chicken,440.2,forecast
+2024-12-31,Milk Alternatives,573.7,forecast
+2024-12-31,Salads,472.8,forecast
+2024-12-31,Vaccines,368.5,forecast
+2025-01-01,Antibiotics,383.8,forecast
+2025-01-01,Apples,426.2,forecast
+2025-01-01,Avocados,428.5,forecast
+2025-01-01,Bagels,423.2,forecast
+2025-01-01,Bananas,433.0,forecast
+2025-01-01,Beef,422.3,forecast
+2025-01-01,Berries,404.1,forecast
+2025-01-01,Biologics,369.5,forecast
+2025-01-01,Bread,331.9,forecast
+2025-01-01,Butter,424.3,forecast
+2025-01-01,Cakes,422.8,forecast
+2025-01-01,Cheese,443.8,forecast
+2025-01-01,Chicken,440.2,forecast
+2025-01-01,Cod,746.6,forecast
+2025-01-01,Cold Brew Coffee,585.5,forecast
+2025-01-01,Cottage Cheese,400.9,forecast
+2025-01-01,Crab,426.5,forecast
+2025-01-01,Cream,435.5,forecast
+2025-01-01,Croissants,427.5,forecast
+2025-01-01,Dips,508.8,forecast
+2025-01-01,Donuts,414.1,forecast
+2025-01-01,Eye Drops,366.5,forecast
+2025-01-01,Fresh Juice,547.1,forecast
+2025-01-01,Fresh Pasta,498.6,forecast
+2025-01-01,Frozen Desserts,361.2,forecast
+2025-01-01,Frozen Dinners,396.3,forecast
+2025-01-01,Frozen Vegetables,403.5,forecast
+2025-01-01,Grapes,422.3,forecast
+2025-01-01,Ground Beef,241.7,forecast
+2025-01-01,Ham,510.2,forecast
+2025-01-01,Hummus,505.2,forecast
+2025-01-01,Ice Cream,391.5,forecast
+2025-01-01,Insulin,380.7,forecast
+2025-01-01,Kombucha,555.7,forecast
+2025-01-01,Lamb,413.5,forecast
+2025-01-01,Lettuce,409.1,forecast
+2025-01-01,Lobster,424.7,forecast
+2025-01-01,Milk,480.7,forecast
+2025-01-01,Milk Alternatives,573.7,forecast
+2025-01-01,Muffins,569.2,forecast
+2025-01-01,Pastries,425.3,forecast
+2025-01-01,Pizza,348.5,forecast
+2025-01-01,Pork,412.2,forecast
+2025-01-01,Prepared Salads,488.6,forecast
+2025-01-01,Probiotics,355.8,forecast
+2025-01-01,Salads,491.2,forecast
+2025-01-01,Salami,490.7,forecast
+2025-01-01,Salmon,409.4,forecast
+2025-01-01,Sandwiches,491.4,forecast
+2025-01-01,Sausages,408.4,forecast
+2025-01-01,Shrimp,407.2,forecast
+2025-01-01,Smoothies,568.5,forecast
+2025-01-01,Soups,515.2,forecast
+2025-01-01,Sour Cream,419.3,forecast
+2025-01-01,Sushi,503.3,forecast
+2025-01-01,Tilapia,410.0,forecast
+2025-01-01,Tomatoes,426.8,forecast
+2025-01-01,Tuna,442.8,forecast
+2025-01-01,Turkey,401.9,forecast
+2025-01-01,Turkey Slices,500.4,forecast
+2025-01-01,Vaccines,356.9,forecast
+2025-01-01,Wraps,512.0,forecast
+2025-01-01,Yogurt,437.6,forecast
+2025-01-02,Antibiotics,383.8,forecast
+2025-01-02,Apples,426.2,forecast
+2025-01-02,Avocados,428.5,forecast
+2025-01-02,Bagels,423.2,forecast
+2025-01-02,Bananas,433.0,forecast
+2025-01-02,Beef,422.3,forecast
+2025-01-02,Berries,404.1,forecast
+2025-01-02,Biologics,369.5,forecast
+2025-01-02,Bread,414.9,forecast
+2025-01-02,Butter,412.1,forecast
+2025-01-02,Cakes,422.8,forecast
+2025-01-02,Cheese,443.8,forecast
+2025-01-02,Chicken,440.2,forecast
+2025-01-02,Cod,820.1,forecast
+2025-01-02,Cold Brew Coffee,585.5,forecast
+2025-01-02,Cottage Cheese,399.5,forecast
+2025-01-02,Crab,426.5,forecast
+2025-01-02,Cream,435.5,forecast
+2025-01-02,Croissants,427.5,forecast
+2025-01-02,Dips,496.3,forecast
+2025-01-02,Donuts,414.1,forecast
+2025-01-02,Eye Drops,366.5,forecast
+2025-01-02,Fresh Juice,477.4,forecast
+2025-01-02,Fresh Pasta,498.6,forecast
+2025-01-02,Frozen Desserts,361.2,forecast
+2025-01-02,Frozen Dinners,360.9,forecast
+2025-01-02,Frozen Vegetables,380.4,forecast
+2025-01-02,Grapes,422.3,forecast
+2025-01-02,Ground Beef,278.0,forecast
+2025-01-02,Ham,510.2,forecast
+2025-01-02,Hummus,505.2,forecast
+2025-01-02,Ice Cream,399.2,forecast
+2025-01-02,Insulin,365.1,forecast
+2025-01-02,Kombucha,555.7,forecast
+2025-01-02,Lamb,413.5,forecast
+2025-01-02,Lettuce,409.1,forecast
+2025-01-02,Lobster,422.6,forecast
+2025-01-02,Milk,417.3,forecast
+2025-01-02,Milk Alternatives,573.7,forecast
+2025-01-02,Muffins,538.6,forecast
+2025-01-02,Pastries,425.3,forecast
+2025-01-02,Pizza,362.0,forecast
+2025-01-02,Pork,412.2,forecast
+2025-01-02,Prepared Salads,488.6,forecast
+2025-01-02,Probiotics,355.8,forecast
+2025-01-02,Salads,429.1,forecast
+2025-01-02,Salami,490.7,forecast
+2025-01-02,Salmon,409.4,forecast
+2025-01-02,Sandwiches,491.4,forecast
+2025-01-02,Sausages,436.0,forecast
+2025-01-02,Shrimp,427.3,forecast
+2025-01-02,Smoothies,568.5,forecast
+2025-01-02,Soups,543.2,forecast
+2025-01-02,Sour Cream,419.3,forecast
+2025-01-02,Sushi,499.9,forecast
+2025-01-02,Tilapia,415.7,forecast
+2025-01-02,Tomatoes,426.8,forecast
+2025-01-02,Tuna,413.6,forecast
+2025-01-02,Turkey,391.5,forecast
+2025-01-02,Turkey Slices,500.4,forecast
+2025-01-02,Vaccines,357.5,forecast
+2025-01-02,Wraps,512.0,forecast
+2025-01-02,Yogurt,437.6,forecast
+2025-01-03,Antibiotics,383.8,forecast
+2025-01-03,Apples,426.2,forecast
+2025-01-03,Avocados,428.5,forecast
+2025-01-03,Bagels,423.2,forecast
+2025-01-03,Bananas,433.0,forecast
+2025-01-03,Beef,422.3,forecast
+2025-01-03,Berries,404.1,forecast
+2025-01-03,Biologics,369.5,forecast
+2025-01-03,Bread,391.2,forecast
+2025-01-03,Butter,466.5,forecast
+2025-01-03,Cakes,422.8,forecast
+2025-01-03,Cheese,443.8,forecast
+2025-01-03,Chicken,440.2,forecast
+2025-01-03,Cod,1006.4,forecast
+2025-01-03,Cold Brew Coffee,585.5,forecast
+2025-01-03,Cottage Cheese,399.5,forecast
+2025-01-03,Crab,426.5,forecast
+2025-01-03,Cream,435.5,forecast
+2025-01-03,Croissants,427.5,forecast
+2025-01-03,Dips,496.3,forecast
+2025-01-03,Donuts,414.1,forecast
+2025-01-03,Eye Drops,366.5,forecast
+2025-01-03,Fresh Juice,604.1,forecast
+2025-01-03,Fresh Pasta,498.6,forecast
+2025-01-03,Frozen Desserts,361.2,forecast
+2025-01-03,Frozen Dinners,319.6,forecast
+2025-01-03,Frozen Vegetables,356.2,forecast
+2025-01-03,Grapes,422.3,forecast
+2025-01-03,Ground Beef,285.9,forecast
+2025-01-03,Ham,510.2,forecast
+2025-01-03,Hummus,505.2,forecast
+2025-01-03,Ice Cream,393.6,forecast
+2025-01-03,Insulin,424.2,forecast
+2025-01-03,Kombucha,555.7,forecast
+2025-01-03,Lamb,413.5,forecast
+2025-01-03,Lettuce,409.1,forecast
+2025-01-03,Lobster,412.9,forecast
+2025-01-03,Milk,442.9,forecast
+2025-01-03,Milk Alternatives,573.7,forecast
+2025-01-03,Muffins,531.9,forecast
+2025-01-03,Pastries,425.3,forecast
+2025-01-03,Pizza,377.1,forecast
+2025-01-03,Pork,412.2,forecast
+2025-01-03,Prepared Salads,488.6,forecast
+2025-01-03,Probiotics,355.8,forecast
+2025-01-03,Salads,488.4,forecast
+2025-01-03,Salami,490.7,forecast
+2025-01-03,Salmon,409.4,forecast
+2025-01-03,Sandwiches,491.4,forecast
+2025-01-03,Sausages,430.7,forecast
+2025-01-03,Shrimp,423.5,forecast
+2025-01-03,Smoothies,568.5,forecast
+2025-01-03,Soups,568.7,forecast
+2025-01-03,Sour Cream,419.3,forecast
+2025-01-03,Sushi,499.8,forecast
+2025-01-03,Tilapia,415.7,forecast
+2025-01-03,Tomatoes,426.8,forecast
+2025-01-03,Tuna,411.1,forecast
+2025-01-03,Turkey,398.8,forecast
+2025-01-03,Turkey Slices,500.4,forecast
+2025-01-03,Vaccines,357.4,forecast
+2025-01-03,Wraps,512.0,forecast
+2025-01-03,Yogurt,437.6,forecast
+2025-01-04,Antibiotics,383.8,forecast
+2025-01-04,Apples,426.2,forecast
+2025-01-04,Avocados,428.5,forecast
+2025-01-04,Bagels,423.2,forecast
+2025-01-04,Bananas,433.0,forecast
+2025-01-04,Beef,422.3,forecast
+2025-01-04,Berries,404.1,forecast
+2025-01-04,Biologics,369.5,forecast
+2025-01-04,Bread,402.7,forecast
+2025-01-04,Butter,411.0,forecast
+2025-01-04,Cakes,422.8,forecast
+2025-01-04,Cheese,443.8,forecast
+2025-01-04,Chicken,440.2,forecast
+2025-01-04,Cod,806.0,forecast
+2025-01-04,Cold Brew Coffee,585.5,forecast
+2025-01-04,Cottage Cheese,399.5,forecast
+2025-01-04,Crab,426.5,forecast
+2025-01-04,Cream,435.5,forecast
+2025-01-04,Croissants,427.5,forecast
+2025-01-04,Dips,496.3,forecast
+2025-01-04,Donuts,414.1,forecast
+2025-01-04,Eye Drops,366.5,forecast
+2025-01-04,Fresh Juice,529.9,forecast
+2025-01-04,Fresh Pasta,498.6,forecast
+2025-01-04,Frozen Desserts,361.2,forecast
+2025-01-04,Frozen Dinners,434.1,forecast
+2025-01-04,Frozen Vegetables,413.7,forecast
+2025-01-04,Grapes,422.3,forecast
+2025-01-04,Ground Beef,339.4,forecast
+2025-01-04,Ham,510.2,forecast
+2025-01-04,Hummus,505.2,forecast
+2025-01-04,Ice Cream,380.7,forecast
+2025-01-04,Insulin,374.5,forecast
+2025-01-04,Kombucha,555.7,forecast
+2025-01-04,Lamb,413.5,forecast
+2025-01-04,Lettuce,409.1,forecast
+2025-01-04,Lobster,403.6,forecast
+2025-01-04,Milk,419.0,forecast
+2025-01-04,Milk Alternatives,573.7,forecast
+2025-01-04,Muffins,425.4,forecast
+2025-01-04,Pastries,425.3,forecast
+2025-01-04,Pizza,382.4,forecast
+2025-01-04,Pork,412.2,forecast
+2025-01-04,Prepared Salads,488.6,forecast
+2025-01-04,Probiotics,355.8,forecast
+2025-01-04,Salads,454.6,forecast
+2025-01-04,Salami,490.7,forecast
+2025-01-04,Salmon,409.4,forecast
+2025-01-04,Sandwiches,491.4,forecast
+2025-01-04,Sausages,332.2,forecast
+2025-01-04,Shrimp,436.6,forecast
+2025-01-04,Smoothies,568.5,forecast
+2025-01-04,Soups,515.1,forecast
+2025-01-04,Sour Cream,419.3,forecast
+2025-01-04,Sushi,499.8,forecast
+2025-01-04,Tilapia,415.7,forecast
+2025-01-04,Tomatoes,426.8,forecast
+2025-01-04,Tuna,410.9,forecast
+2025-01-04,Turkey,402.1,forecast
+2025-01-04,Turkey Slices,500.4,forecast
+2025-01-04,Vaccines,357.4,forecast
+2025-01-04,Wraps,512.0,forecast
+2025-01-04,Yogurt,437.6,forecast
+2025-01-05,Antibiotics,383.8,forecast
+2025-01-05,Apples,426.2,forecast
+2025-01-05,Avocados,428.5,forecast
+2025-01-05,Bagels,423.2,forecast
+2025-01-05,Bananas,433.0,forecast
+2025-01-05,Beef,422.3,forecast
+2025-01-05,Berries,404.1,forecast
+2025-01-05,Biologics,369.5,forecast
+2025-01-05,Bread,309.9,forecast
+2025-01-05,Butter,454.8,forecast
+2025-01-05,Cakes,422.8,forecast
+2025-01-05,Cheese,443.8,forecast
+2025-01-05,Chicken,440.2,forecast
+2025-01-05,Cod,833.3,forecast
+2025-01-05,Cold Brew Coffee,585.5,forecast
+2025-01-05,Cottage Cheese,399.5,forecast
+2025-01-05,Crab,426.5,forecast
+2025-01-05,Cream,435.5,forecast
+2025-01-05,Croissants,427.5,forecast
+2025-01-05,Dips,496.3,forecast
+2025-01-05,Donuts,414.1,forecast
+2025-01-05,Eye Drops,366.5,forecast
+2025-01-05,Fresh Juice,540.4,forecast
+2025-01-05,Fresh Pasta,498.6,forecast
+2025-01-05,Frozen Desserts,361.2,forecast
+2025-01-05,Frozen Dinners,410.4,forecast
+2025-01-05,Frozen Vegetables,421.5,forecast
+2025-01-05,Grapes,422.3,forecast
+2025-01-05,Ground Beef,287.2,forecast
+2025-01-05,Ham,510.2,forecast
+2025-01-05,Hummus,505.2,forecast
+2025-01-05,Ice Cream,389.1,forecast
+2025-01-05,Insulin,373.1,forecast
+2025-01-05,Kombucha,555.7,forecast
+2025-01-05,Lamb,413.5,forecast
+2025-01-05,Lettuce,409.1,forecast
+2025-01-05,Lobster,403.4,forecast
+2025-01-05,Milk,424.7,forecast
+2025-01-05,Milk Alternatives,573.7,forecast
+2025-01-05,Muffins,528.0,forecast
+2025-01-05,Pastries,425.3,forecast
+2025-01-05,Pizza,418.2,forecast
+2025-01-05,Pork,412.2,forecast
+2025-01-05,Prepared Salads,488.6,forecast
+2025-01-05,Probiotics,355.8,forecast
+2025-01-05,Salads,486.1,forecast
+2025-01-05,Salami,490.7,forecast
+2025-01-05,Salmon,409.4,forecast
+2025-01-05,Sandwiches,491.4,forecast
+2025-01-05,Sausages,331.8,forecast
+2025-01-05,Shrimp,389.5,forecast
+2025-01-05,Smoothies,568.5,forecast
+2025-01-05,Soups,510.8,forecast
+2025-01-05,Sour Cream,419.3,forecast
+2025-01-05,Sushi,499.8,forecast
+2025-01-05,Tilapia,415.7,forecast
+2025-01-05,Tomatoes,426.8,forecast
+2025-01-05,Tuna,410.9,forecast
+2025-01-05,Turkey,421.0,forecast
+2025-01-05,Turkey Slices,500.4,forecast
+2025-01-05,Vaccines,357.4,forecast
+2025-01-05,Wraps,512.0,forecast
+2025-01-05,Yogurt,437.6,forecast
+2025-01-06,Antibiotics,383.8,forecast
+2025-01-06,Apples,426.2,forecast
+2025-01-06,Avocados,428.5,forecast
+2025-01-06,Bagels,423.2,forecast
+2025-01-06,Bananas,433.0,forecast
+2025-01-06,Beef,422.3,forecast
+2025-01-06,Berries,404.1,forecast
+2025-01-06,Biologics,369.5,forecast
+2025-01-06,Bread,396.6,forecast
+2025-01-06,Butter,431.0,forecast
+2025-01-06,Cakes,422.8,forecast
+2025-01-06,Cheese,443.8,forecast
+2025-01-06,Chicken,440.2,forecast
+2025-01-06,Cod,871.4,forecast
+2025-01-06,Cold Brew Coffee,585.5,forecast
+2025-01-06,Cottage Cheese,399.5,forecast
+2025-01-06,Crab,426.5,forecast
+2025-01-06,Cream,435.5,forecast
+2025-01-06,Croissants,427.5,forecast
+2025-01-06,Dips,496.3,forecast
+2025-01-06,Donuts,414.1,forecast
+2025-01-06,Eye Drops,366.5,forecast
+2025-01-06,Fresh Juice,536.3,forecast
+2025-01-06,Fresh Pasta,498.6,forecast
+2025-01-06,Frozen Desserts,361.2,forecast
+2025-01-06,Frozen Dinners,320.1,forecast
+2025-01-06,Frozen Vegetables,386.2,forecast
+2025-01-06,Grapes,422.3,forecast
+2025-01-06,Ground Beef,298.2,forecast
+2025-01-06,Ham,510.2,forecast
+2025-01-06,Hummus,505.2,forecast
+2025-01-06,Ice Cream,393.5,forecast
+2025-01-06,Insulin,353.2,forecast
+2025-01-06,Kombucha,555.7,forecast
+2025-01-06,Lamb,413.5,forecast
+2025-01-06,Lettuce,409.1,forecast
+2025-01-06,Lobster,409.5,forecast
+2025-01-06,Milk,434.2,forecast
+2025-01-06,Milk Alternatives,573.7,forecast
+2025-01-06,Muffins,544.5,forecast
+2025-01-06,Pastries,425.3,forecast
+2025-01-06,Pizza,383.1,forecast
+2025-01-06,Pork,412.2,forecast
+2025-01-06,Prepared Salads,488.6,forecast
+2025-01-06,Probiotics,355.8,forecast
+2025-01-06,Salads,536.5,forecast
+2025-01-06,Salami,490.7,forecast
+2025-01-06,Salmon,409.4,forecast
+2025-01-06,Sandwiches,491.4,forecast
+2025-01-06,Sausages,432.2,forecast
+2025-01-06,Shrimp,433.8,forecast
+2025-01-06,Smoothies,568.5,forecast
+2025-01-06,Soups,540.2,forecast
+2025-01-06,Sour Cream,419.3,forecast
+2025-01-06,Sushi,499.8,forecast
+2025-01-06,Tilapia,415.7,forecast
+2025-01-06,Tomatoes,426.8,forecast
+2025-01-06,Tuna,410.9,forecast
+2025-01-06,Turkey,392.0,forecast
+2025-01-06,Turkey Slices,500.4,forecast
+2025-01-06,Vaccines,357.4,forecast
+2025-01-06,Wraps,512.0,forecast
+2025-01-06,Yogurt,437.6,forecast
+2025-01-07,Antibiotics,383.8,forecast
+2025-01-07,Apples,426.2,forecast
+2025-01-07,Avocados,428.5,forecast
+2025-01-07,Bagels,423.2,forecast
+2025-01-07,Bananas,433.0,forecast
+2025-01-07,Beef,422.3,forecast
+2025-01-07,Berries,404.1,forecast
+2025-01-07,Biologics,369.5,forecast
+2025-01-07,Bread,433.5,forecast
+2025-01-07,Butter,418.4,forecast
+2025-01-07,Cakes,422.8,forecast
+2025-01-07,Cheese,443.8,forecast
+2025-01-07,Chicken,440.2,forecast
+2025-01-07,Cod,886.7,forecast
+2025-01-07,Cold Brew Coffee,585.5,forecast
+2025-01-07,Cottage Cheese,399.5,forecast
+2025-01-07,Crab,426.5,forecast
+2025-01-07,Cream,435.5,forecast
+2025-01-07,Croissants,427.5,forecast
+2025-01-07,Dips,496.3,forecast
+2025-01-07,Donuts,414.1,forecast
+2025-01-07,Eye Drops,366.5,forecast
+2025-01-07,Fresh Juice,552.6,forecast
+2025-01-07,Fresh Pasta,498.6,forecast
+2025-01-07,Frozen Desserts,361.2,forecast
+2025-01-07,Frozen Dinners,308.6,forecast
+2025-01-07,Frozen Vegetables,374.5,forecast
+2025-01-07,Grapes,422.3,forecast
+2025-01-07,Ground Beef,303.5,forecast
+2025-01-07,Ham,510.2,forecast
+2025-01-07,Hummus,505.2,forecast
+2025-01-07,Ice Cream,385.8,forecast
+2025-01-07,Insulin,383.2,forecast
+2025-01-07,Kombucha,555.7,forecast
+2025-01-07,Lamb,413.5,forecast
+2025-01-07,Lettuce,409.1,forecast
+2025-01-07,Lobster,412.9,forecast
+2025-01-07,Milk,476.7,forecast
+2025-01-07,Milk Alternatives,573.7,forecast
+2025-01-07,Muffins,481.3,forecast
+2025-01-07,Pastries,425.3,forecast
+2025-01-07,Pizza,404.8,forecast
+2025-01-07,Pork,412.2,forecast
+2025-01-07,Prepared Salads,488.6,forecast
+2025-01-07,Probiotics,355.8,forecast
+2025-01-07,Salads,484.3,forecast
+2025-01-07,Salami,490.7,forecast
+2025-01-07,Salmon,409.4,forecast
+2025-01-07,Sandwiches,491.4,forecast
+2025-01-07,Sausages,404.8,forecast
+2025-01-07,Shrimp,430.9,forecast
+2025-01-07,Smoothies,568.5,forecast
+2025-01-07,Soups,514.6,forecast
+2025-01-07,Sour Cream,419.3,forecast
+2025-01-07,Sushi,499.8,forecast
+2025-01-07,Tilapia,415.7,forecast
+2025-01-07,Tomatoes,426.8,forecast
+2025-01-07,Tuna,410.9,forecast
+2025-01-07,Turkey,443.4,forecast
+2025-01-07,Turkey Slices,500.4,forecast
+2025-01-07,Vaccines,357.4,forecast
+2025-01-07,Wraps,512.0,forecast
+2025-01-07,Yogurt,437.6,forecast
+2025-01-08,Antibiotics,383.8,forecast
+2025-01-08,Apples,426.2,forecast
+2025-01-08,Avocados,428.5,forecast
+2025-01-08,Bagels,423.2,forecast
+2025-01-08,Bananas,433.0,forecast
+2025-01-08,Beef,422.3,forecast
+2025-01-08,Berries,404.1,forecast
+2025-01-08,Biologics,369.5,forecast
+2025-01-08,Bread,409.4,forecast
+2025-01-08,Butter,426.9,forecast
+2025-01-08,Cakes,422.8,forecast
+2025-01-08,Cheese,443.8,forecast
+2025-01-08,Chicken,440.2,forecast
+2025-01-08,Cod,844.1,forecast
+2025-01-08,Cold Brew Coffee,585.5,forecast
+2025-01-08,Cottage Cheese,399.5,forecast
+2025-01-08,Crab,426.5,forecast
+2025-01-08,Cream,435.5,forecast
+2025-01-08,Croissants,427.5,forecast
+2025-01-08,Dips,496.3,forecast
+2025-01-08,Donuts,414.1,forecast
+2025-01-08,Eye Drops,366.5,forecast
+2025-01-08,Fresh Juice,540.4,forecast
+2025-01-08,Fresh Pasta,498.6,forecast
+2025-01-08,Frozen Desserts,361.2,forecast
+2025-01-08,Frozen Dinners,391.0,forecast
+2025-01-08,Frozen Vegetables,388.1,forecast
+2025-01-08,Grapes,422.3,forecast
+2025-01-08,Ground Beef,306.0,forecast
+2025-01-08,Ham,510.2,forecast
+2025-01-08,Hummus,505.2,forecast
+2025-01-08,Ice Cream,394.6,forecast
+2025-01-08,Insulin,368.8,forecast
+2025-01-08,Kombucha,555.7,forecast
+2025-01-08,Lamb,413.5,forecast
+2025-01-08,Lettuce,409.1,forecast
+2025-01-08,Lobster,412.7,forecast
+2025-01-08,Milk,439.2,forecast
+2025-01-08,Milk Alternatives,573.7,forecast
+2025-01-08,Muffins,492.5,forecast
+2025-01-08,Pastries,425.3,forecast
+2025-01-08,Pizza,374.6,forecast
+2025-01-08,Pork,412.2,forecast
+2025-01-08,Prepared Salads,488.6,forecast
+2025-01-08,Probiotics,355.8,forecast
+2025-01-08,Salads,490.4,forecast
+2025-01-08,Salami,490.7,forecast
+2025-01-08,Salmon,409.4,forecast
+2025-01-08,Sandwiches,491.4,forecast
+2025-01-08,Sausages,415.1,forecast
+2025-01-08,Shrimp,419.6,forecast
+2025-01-08,Smoothies,568.5,forecast
+2025-01-08,Soups,528.9,forecast
+2025-01-08,Sour Cream,419.3,forecast
+2025-01-08,Sushi,499.8,forecast
+2025-01-08,Tilapia,415.7,forecast
+2025-01-08,Tomatoes,426.8,forecast
+2025-01-08,Tuna,410.9,forecast
+2025-01-08,Turkey,412.0,forecast
+2025-01-08,Turkey Slices,500.4,forecast
+2025-01-08,Vaccines,357.4,forecast
+2025-01-08,Wraps,512.0,forecast
+2025-01-08,Yogurt,437.6,forecast
+2025-01-09,Antibiotics,383.8,forecast
+2025-01-09,Apples,426.2,forecast
+2025-01-09,Avocados,428.5,forecast
+2025-01-09,Bagels,423.2,forecast
+2025-01-09,Bananas,433.0,forecast
+2025-01-09,Beef,422.3,forecast
+2025-01-09,Berries,404.1,forecast
+2025-01-09,Biologics,369.5,forecast
+2025-01-09,Bread,409.4,forecast
+2025-01-09,Butter,426.9,forecast
+2025-01-09,Cakes,422.8,forecast
+2025-01-09,Cheese,443.8,forecast
+2025-01-09,Chicken,440.2,forecast
+2025-01-09,Cod,857.2,forecast
+2025-01-09,Cold Brew Coffee,585.5,forecast
+2025-01-09,Cottage Cheese,399.5,forecast
+2025-01-09,Crab,426.5,forecast
+2025-01-09,Cream,435.5,forecast
+2025-01-09,Croissants,427.5,forecast
+2025-01-09,Dips,496.3,forecast
+2025-01-09,Donuts,414.1,forecast
+2025-01-09,Eye Drops,366.5,forecast
+2025-01-09,Fresh Juice,542.4,forecast
+2025-01-09,Fresh Pasta,498.6,forecast
+2025-01-09,Frozen Desserts,361.2,forecast
+2025-01-09,Frozen Dinners,364.9,forecast
+2025-01-09,Frozen Vegetables,381.9,forecast
+2025-01-09,Grapes,422.3,forecast
+2025-01-09,Ground Beef,299.0,forecast
+2025-01-09,Ham,510.2,forecast
+2025-01-09,Hummus,505.2,forecast
+2025-01-09,Ice Cream,395.7,forecast
+2025-01-09,Insulin,380.1,forecast
+2025-01-09,Kombucha,555.7,forecast
+2025-01-09,Lamb,413.5,forecast
+2025-01-09,Lettuce,409.1,forecast
+2025-01-09,Lobster,413.0,forecast
+2025-01-09,Milk,436.2,forecast
+2025-01-09,Milk Alternatives,573.7,forecast
+2025-01-09,Muffins,509.5,forecast
+2025-01-09,Pastries,425.3,forecast
+2025-01-09,Pizza,375.6,forecast
+2025-01-09,Pork,412.2,forecast
+2025-01-09,Prepared Salads,488.6,forecast
+2025-01-09,Probiotics,355.8,forecast
+2025-01-09,Salads,445.5,forecast
+2025-01-09,Salami,490.7,forecast
+2025-01-09,Salmon,409.4,forecast
+2025-01-09,Sandwiches,491.4,forecast
+2025-01-09,Sausages,412.5,forecast
+2025-01-09,Shrimp,419.6,forecast
+2025-01-09,Smoothies,568.5,forecast
+2025-01-09,Soups,530.8,forecast
+2025-01-09,Sour Cream,419.3,forecast
+2025-01-09,Sushi,499.8,forecast
+2025-01-09,Tilapia,415.7,forecast
+2025-01-09,Tomatoes,426.8,forecast
+2025-01-09,Tuna,410.9,forecast
+2025-01-09,Turkey,412.0,forecast
+2025-01-09,Turkey Slices,500.4,forecast
+2025-01-09,Vaccines,357.4,forecast
+2025-01-09,Wraps,512.0,forecast
+2025-01-09,Yogurt,437.6,forecast
+2025-01-10,Antibiotics,383.8,forecast
+2025-01-10,Apples,426.2,forecast
+2025-01-10,Avocados,428.5,forecast
+2025-01-10,Bagels,423.2,forecast
+2025-01-10,Bananas,433.0,forecast
+2025-01-10,Beef,422.3,forecast
+2025-01-10,Berries,404.1,forecast
+2025-01-10,Biologics,369.5,forecast
+2025-01-10,Bread,409.4,forecast
+2025-01-10,Butter,426.9,forecast
+2025-01-10,Cakes,422.8,forecast
+2025-01-10,Cheese,443.8,forecast
+2025-01-10,Chicken,440.2,forecast
+2025-01-10,Cod,867.0,forecast
+2025-01-10,Cold Brew Coffee,585.5,forecast
+2025-01-10,Cottage Cheese,399.5,forecast
+2025-01-10,Crab,426.5,forecast
+2025-01-10,Cream,435.5,forecast
+2025-01-10,Croissants,427.5,forecast
+2025-01-10,Dips,496.3,forecast
+2025-01-10,Donuts,414.1,forecast
+2025-01-10,Eye Drops,366.5,forecast
+2025-01-10,Fresh Juice,542.7,forecast
+2025-01-10,Fresh Pasta,498.6,forecast
+2025-01-10,Frozen Desserts,361.2,forecast
+2025-01-10,Frozen Dinners,332.6,forecast
+2025-01-10,Frozen Vegetables,361.8,forecast
+2025-01-10,Grapes,422.3,forecast
+2025-01-10,Ground Beef,301.8,forecast
+2025-01-10,Ham,510.2,forecast
+2025-01-10,Hummus,505.2,forecast
+2025-01-10,Ice Cream,395.7,forecast
+2025-01-10,Insulin,339.8,forecast
+2025-01-10,Kombucha,555.7,forecast
+2025-01-10,Lamb,413.5,forecast
+2025-01-10,Lettuce,409.1,forecast
+2025-01-10,Lobster,413.0,forecast
+2025-01-10,Milk,436.0,forecast
+2025-01-10,Milk Alternatives,573.7,forecast
+2025-01-10,Muffins,507.8,forecast
+2025-01-10,Pastries,425.3,forecast
+2025-01-10,Pizza,376.7,forecast
+2025-01-10,Pork,412.2,forecast
+2025-01-10,Prepared Salads,488.6,forecast
+2025-01-10,Probiotics,355.8,forecast
+2025-01-10,Salads,493.3,forecast
+2025-01-10,Salami,490.7,forecast
+2025-01-10,Salmon,409.4,forecast
+2025-01-10,Sandwiches,491.4,forecast
+2025-01-10,Sausages,413.0,forecast
+2025-01-10,Shrimp,419.6,forecast
+2025-01-10,Smoothies,568.5,forecast
+2025-01-10,Soups,532.5,forecast
+2025-01-10,Sour Cream,419.3,forecast
+2025-01-10,Sushi,499.8,forecast
+2025-01-10,Tilapia,415.7,forecast
+2025-01-10,Tomatoes,426.8,forecast
+2025-01-10,Tuna,410.9,forecast
+2025-01-10,Turkey,412.0,forecast
+2025-01-10,Turkey Slices,500.4,forecast
+2025-01-10,Vaccines,357.4,forecast
+2025-01-10,Wraps,512.0,forecast
+2025-01-10,Yogurt,437.6,forecast
+2025-01-11,Antibiotics,383.8,forecast
+2025-01-11,Apples,426.2,forecast
+2025-01-11,Avocados,428.5,forecast
+2025-01-11,Bagels,423.2,forecast
+2025-01-11,Bananas,433.0,forecast
+2025-01-11,Beef,422.3,forecast
+2025-01-11,Berries,404.1,forecast
+2025-01-11,Biologics,369.5,forecast
+2025-01-11,Bread,409.4,forecast
+2025-01-11,Butter,426.9,forecast
+2025-01-11,Cakes,422.8,forecast
+2025-01-11,Cheese,443.8,forecast
+2025-01-11,Chicken,440.2,forecast
+2025-01-11,Cod,864.7,forecast
+2025-01-11,Cold Brew Coffee,585.5,forecast
+2025-01-11,Cottage Cheese,399.5,forecast
+2025-01-11,Crab,426.5,forecast
+2025-01-11,Cream,435.5,forecast
+2025-01-11,Croissants,427.5,forecast
+2025-01-11,Dips,496.3,forecast
+2025-01-11,Donuts,414.1,forecast
+2025-01-11,Eye Drops,366.5,forecast
+2025-01-11,Fresh Juice,544.6,forecast
+2025-01-11,Fresh Pasta,498.6,forecast
+2025-01-11,Frozen Desserts,361.2,forecast
+2025-01-11,Frozen Dinners,420.4,forecast
+2025-01-11,Frozen Vegetables,409.7,forecast
+2025-01-11,Grapes,422.3,forecast
+2025-01-11,Ground Beef,302.6,forecast
+2025-01-11,Ham,510.2,forecast
+2025-01-11,Hummus,505.2,forecast
+2025-01-11,Ice Cream,395.7,forecast
+2025-01-11,Insulin,388.5,forecast
+2025-01-11,Kombucha,555.7,forecast
+2025-01-11,Lamb,413.5,forecast
+2025-01-11,Lettuce,409.1,forecast
+2025-01-11,Lobster,413.0,forecast
+2025-01-11,Milk,435.9,forecast
+2025-01-11,Milk Alternatives,573.7,forecast
+2025-01-11,Muffins,496.6,forecast
+2025-01-11,Pastries,425.3,forecast
+2025-01-11,Pizza,377.1,forecast
+2025-01-11,Pork,412.2,forecast
+2025-01-11,Prepared Salads,488.6,forecast
+2025-01-11,Probiotics,355.8,forecast
+2025-01-11,Salads,461.5,forecast
+2025-01-11,Salami,490.7,forecast
+2025-01-11,Salmon,409.4,forecast
+2025-01-11,Sandwiches,491.4,forecast
+2025-01-11,Sausages,422.2,forecast
+2025-01-11,Shrimp,419.6,forecast
+2025-01-11,Smoothies,568.5,forecast
+2025-01-11,Soups,528.9,forecast
+2025-01-11,Sour Cream,419.3,forecast
+2025-01-11,Sushi,499.8,forecast
+2025-01-11,Tilapia,415.7,forecast
+2025-01-11,Tomatoes,426.8,forecast
+2025-01-11,Tuna,410.9,forecast
+2025-01-11,Turkey,412.0,forecast
+2025-01-11,Turkey Slices,500.4,forecast
+2025-01-11,Vaccines,357.4,forecast
+2025-01-11,Wraps,512.0,forecast
+2025-01-11,Yogurt,437.6,forecast
+2025-01-12,Antibiotics,383.8,forecast
+2025-01-12,Apples,426.2,forecast
+2025-01-12,Avocados,428.5,forecast
+2025-01-12,Bagels,423.2,forecast
+2025-01-12,Bananas,433.0,forecast
+2025-01-12,Beef,422.3,forecast
+2025-01-12,Berries,404.1,forecast
+2025-01-12,Biologics,369.5,forecast
+2025-01-12,Bread,409.4,forecast
+2025-01-12,Butter,426.9,forecast
+2025-01-12,Cakes,422.8,forecast
+2025-01-12,Cheese,443.8,forecast
+2025-01-12,Chicken,440.2,forecast
+2025-01-12,Cod,856.8,forecast
+2025-01-12,Cold Brew Coffee,585.5,forecast
+2025-01-12,Cottage Cheese,399.5,forecast
+2025-01-12,Crab,426.5,forecast
+2025-01-12,Cream,435.5,forecast
+2025-01-12,Croissants,427.5,forecast
+2025-01-12,Dips,496.3,forecast
+2025-01-12,Donuts,414.1,forecast
+2025-01-12,Eye Drops,366.5,forecast
+2025-01-12,Fresh Juice,542.6,forecast
+2025-01-12,Fresh Pasta,498.6,forecast
+2025-01-12,Frozen Desserts,361.2,forecast
+2025-01-12,Frozen Dinners,400.9,forecast
+2025-01-12,Frozen Vegetables,416.2,forecast
+2025-01-12,Grapes,422.3,forecast
+2025-01-12,Ground Beef,302.2,forecast
+2025-01-12,Ham,510.2,forecast
+2025-01-12,Hummus,505.2,forecast
+2025-01-12,Ice Cream,395.7,forecast
+2025-01-12,Insulin,390.2,forecast
+2025-01-12,Kombucha,555.7,forecast
+2025-01-12,Lamb,413.5,forecast
+2025-01-12,Lettuce,409.1,forecast
+2025-01-12,Lobster,413.0,forecast
+2025-01-12,Milk,435.9,forecast
+2025-01-12,Milk Alternatives,573.7,forecast
+2025-01-12,Muffins,501.6,forecast
+2025-01-12,Pastries,425.3,forecast
+2025-01-12,Pizza,379.8,forecast
+2025-01-12,Pork,412.2,forecast
+2025-01-12,Prepared Salads,488.6,forecast
+2025-01-12,Probiotics,355.8,forecast
+2025-01-12,Salads,492.1,forecast
+2025-01-12,Salami,490.7,forecast
+2025-01-12,Salmon,409.4,forecast
+2025-01-12,Sandwiches,491.4,forecast
+2025-01-12,Sausages,422.3,forecast
+2025-01-12,Shrimp,419.6,forecast
+2025-01-12,Smoothies,568.5,forecast
+2025-01-12,Soups,528.6,forecast
+2025-01-12,Sour Cream,419.3,forecast
+2025-01-12,Sushi,499.8,forecast
+2025-01-12,Tilapia,415.7,forecast
+2025-01-12,Tomatoes,426.8,forecast
+2025-01-12,Tuna,410.9,forecast
+2025-01-12,Turkey,412.0,forecast
+2025-01-12,Turkey Slices,500.4,forecast
+2025-01-12,Vaccines,357.4,forecast
+2025-01-12,Wraps,512.0,forecast
+2025-01-12,Yogurt,437.6,forecast
+2025-01-13,Antibiotics,383.8,forecast
+2025-01-13,Apples,426.2,forecast
+2025-01-13,Avocados,428.5,forecast
+2025-01-13,Bagels,423.2,forecast
+2025-01-13,Bananas,433.0,forecast
+2025-01-13,Beef,422.3,forecast
+2025-01-13,Berries,404.1,forecast
+2025-01-13,Biologics,369.5,forecast
+2025-01-13,Bread,409.4,forecast
+2025-01-13,Butter,426.9,forecast
+2025-01-13,Cakes,422.8,forecast
+2025-01-13,Cheese,443.8,forecast
+2025-01-13,Chicken,440.2,forecast
+2025-01-13,Cod,861.4,forecast
+2025-01-13,Cold Brew Coffee,585.5,forecast
+2025-01-13,Cottage Cheese,399.5,forecast
+2025-01-13,Crab,426.5,forecast
+2025-01-13,Cream,435.5,forecast
+2025-01-13,Croissants,427.5,forecast
+2025-01-13,Dips,496.3,forecast
+2025-01-13,Donuts,414.1,forecast
+2025-01-13,Eye Drops,366.5,forecast
+2025-01-13,Fresh Juice,543.0,forecast
+2025-01-13,Fresh Pasta,498.6,forecast
+2025-01-13,Frozen Desserts,361.2,forecast
+2025-01-13,Frozen Dinners,334.2,forecast
+2025-01-13,Frozen Vegetables,386.7,forecast
+2025-01-13,Grapes,422.3,forecast
+2025-01-13,Ground Beef,301.5,forecast
+2025-01-13,Ham,510.2,forecast
+2025-01-13,Hummus,505.2,forecast
+2025-01-13,Ice Cream,395.7,forecast
+2025-01-13,Insulin,408.5,forecast
+2025-01-13,Kombucha,555.7,forecast
+2025-01-13,Lamb,413.5,forecast
+2025-01-13,Lettuce,409.1,forecast
+2025-01-13,Lobster,413.0,forecast
+2025-01-13,Milk,435.9,forecast
+2025-01-13,Milk Alternatives,573.7,forecast
+2025-01-13,Muffins,506.8,forecast
+2025-01-13,Pastries,425.3,forecast
+2025-01-13,Pizza,377.2,forecast
+2025-01-13,Pork,412.2,forecast
+2025-01-13,Prepared Salads,488.6,forecast
+2025-01-13,Probiotics,355.8,forecast
+2025-01-13,Salads,522.6,forecast
+2025-01-13,Salami,490.7,forecast
+2025-01-13,Salmon,409.4,forecast
+2025-01-13,Sandwiches,491.4,forecast
+2025-01-13,Sausages,412.8,forecast
+2025-01-13,Shrimp,419.6,forecast
+2025-01-13,Smoothies,568.5,forecast
+2025-01-13,Soups,530.6,forecast
+2025-01-13,Sour Cream,419.3,forecast
+2025-01-13,Sushi,499.8,forecast
+2025-01-13,Tilapia,415.7,forecast
+2025-01-13,Tomatoes,426.8,forecast
+2025-01-13,Tuna,410.9,forecast
+2025-01-13,Turkey,412.0,forecast
+2025-01-13,Turkey Slices,500.4,forecast
+2025-01-13,Vaccines,357.4,forecast
+2025-01-13,Wraps,512.0,forecast
+2025-01-13,Yogurt,437.6,forecast
+2025-01-14,Antibiotics,383.8,forecast
+2025-01-14,Apples,426.2,forecast
+2025-01-14,Avocados,428.5,forecast
+2025-01-14,Bagels,423.2,forecast
+2025-01-14,Bananas,433.0,forecast
+2025-01-14,Beef,422.3,forecast
+2025-01-14,Berries,404.1,forecast
+2025-01-14,Biologics,369.5,forecast
+2025-01-14,Bread,409.4,forecast
+2025-01-14,Butter,426.9,forecast
+2025-01-14,Cakes,422.8,forecast
+2025-01-14,Cheese,443.8,forecast
+2025-01-14,Chicken,440.2,forecast
+2025-01-14,Cod,863.1,forecast
+2025-01-14,Cold Brew Coffee,585.5,forecast
+2025-01-14,Cottage Cheese,399.5,forecast
+2025-01-14,Crab,426.5,forecast
+2025-01-14,Cream,435.5,forecast
+2025-01-14,Croissants,427.5,forecast
+2025-01-14,Dips,496.3,forecast
+2025-01-14,Donuts,414.1,forecast
+2025-01-14,Eye Drops,366.5,forecast
+2025-01-14,Fresh Juice,543.2,forecast
+2025-01-14,Fresh Pasta,498.6,forecast
+2025-01-14,Frozen Desserts,361.2,forecast
+2025-01-14,Frozen Dinners,324.7,forecast
+2025-01-14,Frozen Vegetables,377.0,forecast
+2025-01-14,Grapes,422.3,forecast
+2025-01-14,Ground Beef,302.0,forecast
+2025-01-14,Ham,510.2,forecast
+2025-01-14,Hummus,505.2,forecast
+2025-01-14,Ice Cream,395.7,forecast
+2025-01-14,Insulin,381.5,forecast
+2025-01-14,Kombucha,555.7,forecast
+2025-01-14,Lamb,413.5,forecast
+2025-01-14,Lettuce,409.1,forecast
+2025-01-14,Lobster,413.0,forecast
+2025-01-14,Milk,435.9,forecast
+2025-01-14,Milk Alternatives,573.7,forecast
+2025-01-14,Muffins,501.5,forecast
+2025-01-14,Pastries,425.3,forecast
+2025-01-14,Pizza,378.8,forecast
+2025-01-14,Pork,412.2,forecast
+2025-01-14,Prepared Salads,488.6,forecast
+2025-01-14,Probiotics,355.8,forecast
+2025-01-14,Salads,488.7,forecast
+2025-01-14,Salami,490.7,forecast
+2025-01-14,Salmon,409.4,forecast
+2025-01-14,Sandwiches,491.4,forecast
+2025-01-14,Sausages,415.4,forecast
+2025-01-14,Shrimp,419.6,forecast
+2025-01-14,Smoothies,568.5,forecast
+2025-01-14,Soups,528.9,forecast
+2025-01-14,Sour Cream,419.3,forecast
+2025-01-14,Sushi,499.8,forecast
+2025-01-14,Tilapia,415.7,forecast
+2025-01-14,Tomatoes,426.8,forecast
+2025-01-14,Tuna,410.9,forecast
+2025-01-14,Turkey,412.0,forecast
+2025-01-14,Turkey Slices,500.4,forecast
+2025-01-14,Vaccines,357.4,forecast
+2025-01-14,Wraps,512.0,forecast
+2025-01-14,Yogurt,437.6,forecast
+2025-01-15,Antibiotics,383.8,forecast
+2025-01-15,Apples,426.2,forecast
+2025-01-15,Avocados,428.5,forecast
+2025-01-15,Bagels,423.2,forecast
+2025-01-15,Bananas,433.0,forecast
+2025-01-15,Beef,422.3,forecast
+2025-01-15,Berries,404.1,forecast
+2025-01-15,Biologics,369.5,forecast
+2025-01-15,Bread,409.4,forecast
+2025-01-15,Butter,426.9,forecast
+2025-01-15,Cakes,422.8,forecast
+2025-01-15,Cheese,443.8,forecast
+2025-01-15,Chicken,440.2,forecast
+2025-01-15,Cod,861.5,forecast
+2025-01-15,Cold Brew Coffee,585.5,forecast
+2025-01-15,Cottage Cheese,399.5,forecast
+2025-01-15,Crab,426.5,forecast
+2025-01-15,Cream,435.5,forecast
+2025-01-15,Croissants,427.5,forecast
+2025-01-15,Dips,496.3,forecast
+2025-01-15,Donuts,414.1,forecast
+2025-01-15,Eye Drops,366.5,forecast
+2025-01-15,Fresh Juice,543.4,forecast
+2025-01-15,Fresh Pasta,498.6,forecast
+2025-01-15,Frozen Desserts,361.2,forecast
+2025-01-15,Frozen Dinners,387.0,forecast
+2025-01-15,Frozen Vegetables,388.4,forecast
+2025-01-15,Grapes,422.3,forecast
+2025-01-15,Ground Beef,302.1,forecast
+2025-01-15,Ham,510.2,forecast
+2025-01-15,Hummus,505.2,forecast
+2025-01-15,Ice Cream,395.7,forecast
+2025-01-15,Insulin,394.5,forecast
+2025-01-15,Kombucha,555.7,forecast
+2025-01-15,Lamb,413.5,forecast
+2025-01-15,Lettuce,409.1,forecast
+2025-01-15,Lobster,413.0,forecast
+2025-01-15,Milk,435.9,forecast
+2025-01-15,Milk Alternatives,573.7,forecast
+2025-01-15,Muffins,501.5,forecast
+2025-01-15,Pastries,425.3,forecast
+2025-01-15,Pizza,376.5,forecast
+2025-01-15,Pork,412.2,forecast
+2025-01-15,Prepared Salads,488.6,forecast
+2025-01-15,Probiotics,355.8,forecast
+2025-01-15,Salads,491.2,forecast
+2025-01-15,Salami,490.7,forecast
+2025-01-15,Salmon,409.4,forecast
+2025-01-15,Sandwiches,491.4,forecast
+2025-01-15,Sausages,414.4,forecast
+2025-01-15,Shrimp,419.6,forecast
+2025-01-15,Smoothies,568.5,forecast
+2025-01-15,Soups,529.8,forecast
+2025-01-15,Sour Cream,419.3,forecast
+2025-01-15,Sushi,499.8,forecast
+2025-01-15,Tilapia,415.7,forecast
+2025-01-15,Tomatoes,426.8,forecast
+2025-01-15,Tuna,410.9,forecast
+2025-01-15,Turkey,412.0,forecast
+2025-01-15,Turkey Slices,500.4,forecast
+2025-01-15,Vaccines,357.4,forecast
+2025-01-15,Wraps,512.0,forecast
+2025-01-15,Yogurt,437.6,forecast
+2025-01-16,Antibiotics,383.8,forecast
+2025-01-16,Apples,426.2,forecast
+2025-01-16,Avocados,428.5,forecast
+2025-01-16,Bagels,423.2,forecast
+2025-01-16,Bananas,433.0,forecast
+2025-01-16,Beef,422.3,forecast
+2025-01-16,Berries,404.1,forecast
+2025-01-16,Biologics,369.5,forecast
+2025-01-16,Bread,409.4,forecast
+2025-01-16,Butter,426.9,forecast
+2025-01-16,Cakes,422.8,forecast
+2025-01-16,Cheese,443.8,forecast
+2025-01-16,Chicken,440.2,forecast
+2025-01-16,Cod,860.4,forecast
+2025-01-16,Cold Brew Coffee,585.5,forecast
+2025-01-16,Cottage Cheese,399.5,forecast
+2025-01-16,Crab,426.5,forecast
+2025-01-16,Cream,435.5,forecast
+2025-01-16,Croissants,427.5,forecast
+2025-01-16,Dips,496.3,forecast
+2025-01-16,Donuts,414.1,forecast
+2025-01-16,Eye Drops,366.5,forecast
+2025-01-16,Fresh Juice,543.1,forecast
+2025-01-16,Fresh Pasta,498.6,forecast
+2025-01-16,Frozen Desserts,361.2,forecast
+2025-01-16,Frozen Dinners,367.8,forecast
+2025-01-16,Frozen Vegetables,383.2,forecast
+2025-01-16,Grapes,422.3,forecast
+2025-01-16,Ground Beef,301.9,forecast
+2025-01-16,Ham,510.2,forecast
+2025-01-16,Hummus,505.2,forecast
+2025-01-16,Ice Cream,395.7,forecast
+2025-01-16,Insulin,384.3,forecast
+2025-01-16,Kombucha,555.7,forecast
+2025-01-16,Lamb,413.5,forecast
+2025-01-16,Lettuce,409.1,forecast
+2025-01-16,Lobster,413.0,forecast
+2025-01-16,Milk,435.9,forecast
+2025-01-16,Milk Alternatives,573.7,forecast
+2025-01-16,Muffins,502.5,forecast
+2025-01-16,Pastries,425.3,forecast
+2025-01-16,Pizza,376.6,forecast
+2025-01-16,Pork,412.2,forecast
+2025-01-16,Prepared Salads,488.6,forecast
+2025-01-16,Probiotics,355.8,forecast
+2025-01-16,Salads,458.2,forecast
+2025-01-16,Salami,490.7,forecast
+2025-01-16,Salmon,409.4,forecast
+2025-01-16,Sandwiches,491.4,forecast
+2025-01-16,Sausages,414.7,forecast
+2025-01-16,Shrimp,419.6,forecast
+2025-01-16,Smoothies,568.5,forecast
+2025-01-16,Soups,529.9,forecast
+2025-01-16,Sour Cream,419.3,forecast
+2025-01-16,Sushi,499.8,forecast
+2025-01-16,Tilapia,415.7,forecast
+2025-01-16,Tomatoes,426.8,forecast
+2025-01-16,Tuna,410.9,forecast
+2025-01-16,Turkey,412.0,forecast
+2025-01-16,Turkey Slices,500.4,forecast
+2025-01-16,Vaccines,357.4,forecast
+2025-01-16,Wraps,512.0,forecast
+2025-01-16,Yogurt,437.6,forecast
+2025-01-17,Antibiotics,383.8,forecast
+2025-01-17,Apples,426.2,forecast
+2025-01-17,Avocados,428.5,forecast
+2025-01-17,Bagels,423.2,forecast
+2025-01-17,Bananas,433.0,forecast
+2025-01-17,Beef,422.3,forecast
+2025-01-17,Berries,404.1,forecast
+2025-01-17,Biologics,369.5,forecast
+2025-01-17,Bread,409.4,forecast
+2025-01-17,Butter,426.9,forecast
+2025-01-17,Cakes,422.8,forecast
+2025-01-17,Cheese,443.8,forecast
+2025-01-17,Chicken,440.2,forecast
+2025-01-17,Cod,861.7,forecast
+2025-01-17,Cold Brew Coffee,585.5,forecast
+2025-01-17,Cottage Cheese,399.5,forecast
+2025-01-17,Crab,426.5,forecast
+2025-01-17,Cream,435.5,forecast
+2025-01-17,Croissants,427.5,forecast
+2025-01-17,Dips,496.3,forecast
+2025-01-17,Donuts,414.1,forecast
+2025-01-17,Eye Drops,366.5,forecast
+2025-01-17,Fresh Juice,543.2,forecast
+2025-01-17,Fresh Pasta,498.6,forecast
+2025-01-17,Frozen Desserts,361.2,forecast
+2025-01-17,Frozen Dinners,342.4,forecast
+2025-01-17,Frozen Vegetables,366.4,forecast
+2025-01-17,Grapes,422.3,forecast
+2025-01-17,Ground Beef,301.9,forecast
+2025-01-17,Ham,510.2,forecast
+2025-01-17,Hummus,505.2,forecast
+2025-01-17,Ice Cream,395.7,forecast
+2025-01-17,Insulin,420.7,forecast
+2025-01-17,Kombucha,555.7,forecast
+2025-01-17,Lamb,413.5,forecast
+2025-01-17,Lettuce,409.1,forecast
+2025-01-17,Lobster,413.0,forecast
+2025-01-17,Milk,435.9,forecast
+2025-01-17,Milk Alternatives,573.7,forecast
+2025-01-17,Muffins,503.2,forecast
+2025-01-17,Pastries,425.3,forecast
+2025-01-17,Pizza,376.7,forecast
+2025-01-17,Pork,412.2,forecast
+2025-01-17,Prepared Salads,488.6,forecast
+2025-01-17,Probiotics,355.8,forecast
+2025-01-17,Salads,494.8,forecast
+2025-01-17,Salami,490.7,forecast
+2025-01-17,Salmon,409.4,forecast
+2025-01-17,Sandwiches,491.4,forecast
+2025-01-17,Sausages,414.6,forecast
+2025-01-17,Shrimp,419.6,forecast
+2025-01-17,Smoothies,568.5,forecast
+2025-01-17,Soups,530.1,forecast
+2025-01-17,Sour Cream,419.3,forecast
+2025-01-17,Sushi,499.8,forecast
+2025-01-17,Tilapia,415.7,forecast
+2025-01-17,Tomatoes,426.8,forecast
+2025-01-17,Tuna,410.9,forecast
+2025-01-17,Turkey,412.0,forecast
+2025-01-17,Turkey Slices,500.4,forecast
+2025-01-17,Vaccines,357.4,forecast
+2025-01-17,Wraps,512.0,forecast
+2025-01-17,Yogurt,437.6,forecast
+2025-01-18,Antibiotics,383.8,forecast
+2025-01-18,Apples,426.2,forecast
+2025-01-18,Avocados,428.5,forecast
+2025-01-18,Bagels,423.2,forecast
+2025-01-18,Bananas,433.0,forecast
+2025-01-18,Beef,422.3,forecast
+2025-01-18,Berries,404.1,forecast
+2025-01-18,Biologics,369.5,forecast
+2025-01-18,Bread,409.4,forecast
+2025-01-18,Butter,426.9,forecast
+2025-01-18,Cakes,422.8,forecast
+2025-01-18,Cheese,443.8,forecast
+2025-01-18,Chicken,440.2,forecast
+2025-01-18,Cod,861.8,forecast
+2025-01-18,Cold Brew Coffee,585.5,forecast
+2025-01-18,Cottage Cheese,399.5,forecast
+2025-01-18,Crab,426.5,forecast
+2025-01-18,Cream,435.5,forecast
+2025-01-18,Croissants,427.5,forecast
+2025-01-18,Dips,496.3,forecast
+2025-01-18,Donuts,414.1,forecast
+2025-01-18,Eye Drops,366.5,forecast
+2025-01-18,Fresh Juice,543.2,forecast
+2025-01-18,Fresh Pasta,498.6,forecast
+2025-01-18,Frozen Desserts,361.2,forecast
+2025-01-18,Frozen Dinners,409.9,forecast
+2025-01-18,Frozen Vegetables,406.3,forecast
+2025-01-18,Grapes,422.3,forecast
+2025-01-18,Ground Beef,302.0,forecast
+2025-01-18,Ham,510.2,forecast
+2025-01-18,Hummus,505.2,forecast
+2025-01-18,Ice Cream,395.7,forecast
+2025-01-18,Insulin,376.8,forecast
+2025-01-18,Kombucha,555.7,forecast
+2025-01-18,Lamb,413.5,forecast
+2025-01-18,Lettuce,409.1,forecast
+2025-01-18,Lobster,413.0,forecast
+2025-01-18,Milk,435.9,forecast
+2025-01-18,Milk Alternatives,573.7,forecast
+2025-01-18,Muffins,502.1,forecast
+2025-01-18,Pastries,425.3,forecast
+2025-01-18,Pizza,376.7,forecast
+2025-01-18,Pork,412.2,forecast
+2025-01-18,Prepared Salads,488.6,forecast
+2025-01-18,Probiotics,355.8,forecast
+2025-01-18,Salads,469.2,forecast
+2025-01-18,Salami,490.7,forecast
+2025-01-18,Salmon,409.4,forecast
+2025-01-18,Sandwiches,491.4,forecast
+2025-01-18,Sausages,413.8,forecast
+2025-01-18,Shrimp,419.6,forecast
+2025-01-18,Smoothies,568.5,forecast
+2025-01-18,Soups,529.8,forecast
+2025-01-18,Sour Cream,419.3,forecast
+2025-01-18,Sushi,499.8,forecast
+2025-01-18,Tilapia,415.7,forecast
+2025-01-18,Tomatoes,426.8,forecast
+2025-01-18,Tuna,410.9,forecast
+2025-01-18,Turkey,412.0,forecast
+2025-01-18,Turkey Slices,500.4,forecast
+2025-01-18,Vaccines,357.4,forecast
+2025-01-18,Wraps,512.0,forecast
+2025-01-18,Yogurt,437.6,forecast
+2025-01-19,Antibiotics,383.8,forecast
+2025-01-19,Apples,426.2,forecast
+2025-01-19,Avocados,428.5,forecast
+2025-01-19,Bagels,423.2,forecast
+2025-01-19,Bananas,433.0,forecast
+2025-01-19,Beef,422.3,forecast
+2025-01-19,Berries,404.1,forecast
+2025-01-19,Biologics,369.5,forecast
+2025-01-19,Bread,409.4,forecast
+2025-01-19,Butter,426.9,forecast
+2025-01-19,Cakes,422.8,forecast
+2025-01-19,Cheese,443.8,forecast
+2025-01-19,Chicken,440.2,forecast
+2025-01-19,Cod,861.3,forecast
+2025-01-19,Cold Brew Coffee,585.5,forecast
+2025-01-19,Cottage Cheese,399.5,forecast
+2025-01-19,Crab,426.5,forecast
+2025-01-19,Cream,435.5,forecast
+2025-01-19,Croissants,427.5,forecast
+2025-01-19,Dips,496.3,forecast
+2025-01-19,Donuts,414.1,forecast
+2025-01-19,Eye Drops,366.5,forecast
+2025-01-19,Fresh Juice,543.2,forecast
+2025-01-19,Fresh Pasta,498.6,forecast
+2025-01-19,Frozen Desserts,361.2,forecast
+2025-01-19,Frozen Dinners,394.0,forecast
+2025-01-19,Frozen Vegetables,411.7,forecast
+2025-01-19,Grapes,422.3,forecast
+2025-01-19,Ground Beef,302.0,forecast
+2025-01-19,Ham,510.2,forecast
+2025-01-19,Hummus,505.2,forecast
+2025-01-19,Ice Cream,395.7,forecast
+2025-01-19,Insulin,375.2,forecast
+2025-01-19,Kombucha,555.7,forecast
+2025-01-19,Lamb,413.5,forecast
+2025-01-19,Lettuce,409.1,forecast
+2025-01-19,Lobster,413.0,forecast
+2025-01-19,Milk,435.9,forecast
+2025-01-19,Milk Alternatives,573.7,forecast
+2025-01-19,Muffins,502.3,forecast
+2025-01-19,Pastries,425.3,forecast
+2025-01-19,Pizza,376.9,forecast
+2025-01-19,Pork,412.2,forecast
+2025-01-19,Prepared Salads,488.6,forecast
+2025-01-19,Probiotics,355.8,forecast
+2025-01-19,Salads,494.0,forecast
+2025-01-19,Salami,490.7,forecast
+2025-01-19,Salmon,409.4,forecast
+2025-01-19,Sandwiches,491.4,forecast
+2025-01-19,Sausages,413.7,forecast
+2025-01-19,Shrimp,419.6,forecast
+2025-01-19,Smoothies,568.5,forecast
+2025-01-19,Soups,529.8,forecast
+2025-01-19,Sour Cream,419.3,forecast
+2025-01-19,Sushi,499.8,forecast
+2025-01-19,Tilapia,415.7,forecast
+2025-01-19,Tomatoes,426.8,forecast
+2025-01-19,Tuna,410.9,forecast
+2025-01-19,Turkey,412.0,forecast
+2025-01-19,Turkey Slices,500.4,forecast
+2025-01-19,Vaccines,357.4,forecast
+2025-01-19,Wraps,512.0,forecast
+2025-01-19,Yogurt,437.6,forecast
+2025-01-20,Antibiotics,383.8,forecast
+2025-01-20,Apples,426.2,forecast
+2025-01-20,Avocados,428.5,forecast
+2025-01-20,Bagels,423.2,forecast
+2025-01-20,Bananas,433.0,forecast
+2025-01-20,Beef,422.3,forecast
+2025-01-20,Berries,404.1,forecast
+2025-01-20,Biologics,369.5,forecast
+2025-01-20,Bread,409.4,forecast
+2025-01-20,Butter,426.9,forecast
+2025-01-20,Cakes,422.8,forecast
+2025-01-20,Cheese,443.8,forecast
+2025-01-20,Chicken,440.2,forecast
+2025-01-20,Cod,861.2,forecast
+2025-01-20,Cold Brew Coffee,585.5,forecast
+2025-01-20,Cottage Cheese,399.5,forecast
+2025-01-20,Crab,426.5,forecast
+2025-01-20,Cream,435.5,forecast
+2025-01-20,Croissants,427.5,forecast
+2025-01-20,Dips,496.3,forecast
+2025-01-20,Donuts,414.1,forecast
+2025-01-20,Eye Drops,366.5,forecast
+2025-01-20,Fresh Juice,543.2,forecast
+2025-01-20,Fresh Pasta,498.6,forecast
+2025-01-20,Frozen Desserts,361.2,forecast
+2025-01-20,Frozen Dinners,344.7,forecast
+2025-01-20,Frozen Vegetables,387.2,forecast
+2025-01-20,Grapes,422.3,forecast
+2025-01-20,Ground Beef,301.9,forecast
+2025-01-20,Ham,510.2,forecast
+2025-01-20,Hummus,505.2,forecast
+2025-01-20,Ice Cream,395.7,forecast
+2025-01-20,Insulin,358.7,forecast
+2025-01-20,Kombucha,555.7,forecast
+2025-01-20,Lamb,413.5,forecast
+2025-01-20,Lettuce,409.1,forecast
+2025-01-20,Lobster,413.0,forecast
+2025-01-20,Milk,435.9,forecast
+2025-01-20,Milk Alternatives,573.7,forecast
+2025-01-20,Muffins,502.7,forecast
+2025-01-20,Pastries,425.3,forecast
+2025-01-20,Pizza,376.7,forecast
+2025-01-20,Pork,412.2,forecast
+2025-01-20,Prepared Salads,488.6,forecast
+2025-01-20,Probiotics,355.8,forecast
+2025-01-20,Salads,514.4,forecast
+2025-01-20,Salami,490.7,forecast
+2025-01-20,Salmon,409.4,forecast
+2025-01-20,Sandwiches,491.4,forecast
+2025-01-20,Sausages,414.6,forecast
+2025-01-20,Shrimp,419.6,forecast
+2025-01-20,Smoothies,568.5,forecast
+2025-01-20,Soups,529.9,forecast
+2025-01-20,Sour Cream,419.3,forecast
+2025-01-20,Sushi,499.8,forecast
+2025-01-20,Tilapia,415.7,forecast
+2025-01-20,Tomatoes,426.8,forecast
+2025-01-20,Tuna,410.9,forecast
+2025-01-20,Turkey,412.0,forecast
+2025-01-20,Turkey Slices,500.4,forecast
+2025-01-20,Vaccines,357.4,forecast
+2025-01-20,Wraps,512.0,forecast
+2025-01-20,Yogurt,437.6,forecast
+2025-01-21,Antibiotics,383.8,forecast
+2025-01-21,Apples,426.2,forecast
+2025-01-21,Avocados,428.5,forecast
+2025-01-21,Bagels,423.2,forecast
+2025-01-21,Bananas,433.0,forecast
+2025-01-21,Beef,422.3,forecast
+2025-01-21,Berries,404.1,forecast
+2025-01-21,Biologics,369.5,forecast
+2025-01-21,Bread,409.4,forecast
+2025-01-21,Butter,426.9,forecast
+2025-01-21,Cakes,422.8,forecast
+2025-01-21,Cheese,443.8,forecast
+2025-01-21,Chicken,440.2,forecast
+2025-01-21,Cod,861.5,forecast
+2025-01-21,Cold Brew Coffee,585.5,forecast
+2025-01-21,Cottage Cheese,399.5,forecast
+2025-01-21,Crab,426.5,forecast
+2025-01-21,Cream,435.5,forecast
+2025-01-21,Croissants,427.5,forecast
+2025-01-21,Dips,496.3,forecast
+2025-01-21,Donuts,414.1,forecast
+2025-01-21,Eye Drops,366.5,forecast
+2025-01-21,Fresh Juice,543.2,forecast
+2025-01-21,Fresh Pasta,498.6,forecast
+2025-01-21,Frozen Desserts,361.2,forecast
+2025-01-21,Frozen Dinners,336.9,forecast
+2025-01-21,Frozen Vegetables,379.1,forecast
+2025-01-21,Grapes,422.3,forecast
+2025-01-21,Ground Beef,301.9,forecast
+2025-01-21,Ham,510.2,forecast
+2025-01-21,Hummus,505.2,forecast
+2025-01-21,Ice Cream,395.7,forecast
+2025-01-21,Insulin,383.0,forecast
+2025-01-21,Kombucha,555.7,forecast
+2025-01-21,Lamb,413.5,forecast
+2025-01-21,Lettuce,409.1,forecast
+2025-01-21,Lobster,413.0,forecast
+2025-01-21,Milk,435.9,forecast
+2025-01-21,Milk Alternatives,573.7,forecast
+2025-01-21,Muffins,502.5,forecast
+2025-01-21,Pastries,425.3,forecast
+2025-01-21,Pizza,376.8,forecast
+2025-01-21,Pork,412.2,forecast
+2025-01-21,Prepared Salads,488.6,forecast
+2025-01-21,Probiotics,355.8,forecast
+2025-01-21,Salads,490.8,forecast
+2025-01-21,Salami,490.7,forecast
+2025-01-21,Salmon,409.4,forecast
+2025-01-21,Sandwiches,491.4,forecast
+2025-01-21,Sausages,414.4,forecast
+2025-01-21,Shrimp,419.6,forecast
+2025-01-21,Smoothies,568.5,forecast
+2025-01-21,Soups,529.8,forecast
+2025-01-21,Sour Cream,419.3,forecast
+2025-01-21,Sushi,499.8,forecast
+2025-01-21,Tilapia,415.7,forecast
+2025-01-21,Tomatoes,426.8,forecast
+2025-01-21,Tuna,410.9,forecast
+2025-01-21,Turkey,412.0,forecast
+2025-01-21,Turkey Slices,500.4,forecast
+2025-01-21,Vaccines,357.4,forecast
+2025-01-21,Wraps,512.0,forecast
+2025-01-21,Yogurt,437.6,forecast
+2025-01-22,Antibiotics,383.8,forecast
+2025-01-22,Apples,426.2,forecast
+2025-01-22,Avocados,428.5,forecast
+2025-01-22,Bagels,423.2,forecast
+2025-01-22,Bananas,433.0,forecast
+2025-01-22,Beef,422.3,forecast
+2025-01-22,Berries,404.1,forecast
+2025-01-22,Biologics,369.5,forecast
+2025-01-22,Bread,409.4,forecast
+2025-01-22,Butter,426.9,forecast
+2025-01-22,Cakes,422.8,forecast
+2025-01-22,Cheese,443.8,forecast
+2025-01-22,Chicken,440.2,forecast
+2025-01-22,Cod,861.5,forecast
+2025-01-22,Cold Brew Coffee,585.5,forecast
+2025-01-22,Cottage Cheese,399.5,forecast
+2025-01-22,Crab,426.5,forecast
+2025-01-22,Cream,435.5,forecast
+2025-01-22,Croissants,427.5,forecast
+2025-01-22,Dips,496.3,forecast
+2025-01-22,Donuts,414.1,forecast
+2025-01-22,Eye Drops,366.5,forecast
+2025-01-22,Fresh Juice,543.2,forecast
+2025-01-22,Fresh Pasta,498.6,forecast
+2025-01-22,Frozen Desserts,361.2,forecast
+2025-01-22,Frozen Dinners,384.0,forecast
+2025-01-22,Frozen Vegetables,388.5,forecast
+2025-01-22,Grapes,422.3,forecast
+2025-01-22,Ground Beef,301.9,forecast
+2025-01-22,Ham,510.2,forecast
+2025-01-22,Hummus,505.2,forecast
+2025-01-22,Ice Cream,395.7,forecast
+2025-01-22,Insulin,371.3,forecast
+2025-01-22,Kombucha,555.7,forecast
+2025-01-22,Lamb,413.5,forecast
+2025-01-22,Lettuce,409.1,forecast
+2025-01-22,Lobster,413.0,forecast
+2025-01-22,Milk,435.9,forecast
+2025-01-22,Milk Alternatives,573.7,forecast
+2025-01-22,Muffins,502.4,forecast
+2025-01-22,Pastries,425.3,forecast
+2025-01-22,Pizza,376.7,forecast
+2025-01-22,Pork,412.2,forecast
+2025-01-22,Prepared Salads,488.6,forecast
+2025-01-22,Probiotics,355.8,forecast
+2025-01-22,Salads,492.1,forecast
+2025-01-22,Salami,490.7,forecast
+2025-01-22,Salmon,409.4,forecast
+2025-01-22,Sandwiches,491.4,forecast
+2025-01-22,Sausages,414.5,forecast
+2025-01-22,Shrimp,419.6,forecast
+2025-01-22,Smoothies,568.5,forecast
+2025-01-22,Soups,529.9,forecast
+2025-01-22,Sour Cream,419.3,forecast
+2025-01-22,Sushi,499.8,forecast
+2025-01-22,Tilapia,415.7,forecast
+2025-01-22,Tomatoes,426.8,forecast
+2025-01-22,Tuna,410.9,forecast
+2025-01-22,Turkey,412.0,forecast
+2025-01-22,Turkey Slices,500.4,forecast
+2025-01-22,Vaccines,357.4,forecast
+2025-01-22,Wraps,512.0,forecast
+2025-01-22,Yogurt,437.6,forecast
+2025-01-23,Antibiotics,383.8,forecast
+2025-01-23,Apples,426.2,forecast
+2025-01-23,Avocados,428.5,forecast
+2025-01-23,Bagels,423.2,forecast
+2025-01-23,Bananas,433.0,forecast
+2025-01-23,Beef,422.3,forecast
+2025-01-23,Berries,404.1,forecast
+2025-01-23,Biologics,369.5,forecast
+2025-01-23,Bread,409.4,forecast
+2025-01-23,Butter,426.9,forecast
+2025-01-23,Cakes,422.8,forecast
+2025-01-23,Cheese,443.8,forecast
+2025-01-23,Chicken,440.2,forecast
+2025-01-23,Cod,861.3,forecast
+2025-01-23,Cold Brew Coffee,585.5,forecast
+2025-01-23,Cottage Cheese,399.5,forecast
+2025-01-23,Crab,426.5,forecast
+2025-01-23,Cream,435.5,forecast
+2025-01-23,Croissants,427.5,forecast
+2025-01-23,Dips,496.3,forecast
+2025-01-23,Donuts,414.1,forecast
+2025-01-23,Eye Drops,366.5,forecast
+2025-01-23,Fresh Juice,543.2,forecast
+2025-01-23,Fresh Pasta,498.6,forecast
+2025-01-23,Frozen Desserts,361.2,forecast
+2025-01-23,Frozen Dinners,369.9,forecast
+2025-01-23,Frozen Vegetables,384.2,forecast
+2025-01-23,Grapes,422.3,forecast
+2025-01-23,Ground Beef,301.9,forecast
+2025-01-23,Ham,510.2,forecast
+2025-01-23,Hummus,505.2,forecast
+2025-01-23,Ice Cream,395.7,forecast
+2025-01-23,Insulin,380.5,forecast
+2025-01-23,Kombucha,555.7,forecast
+2025-01-23,Lamb,413.5,forecast
+2025-01-23,Lettuce,409.1,forecast
+2025-01-23,Lobster,413.0,forecast
+2025-01-23,Milk,435.9,forecast
+2025-01-23,Milk Alternatives,573.7,forecast
+2025-01-23,Muffins,502.5,forecast
+2025-01-23,Pastries,425.3,forecast
+2025-01-23,Pizza,376.7,forecast
+2025-01-23,Pork,412.2,forecast
+2025-01-23,Prepared Salads,488.6,forecast
+2025-01-23,Probiotics,355.8,forecast
+2025-01-23,Salads,467.8,forecast
+2025-01-23,Salami,490.7,forecast
+2025-01-23,Salmon,409.4,forecast
+2025-01-23,Sandwiches,491.4,forecast
+2025-01-23,Sausages,414.5,forecast
+2025-01-23,Shrimp,419.6,forecast
+2025-01-23,Smoothies,568.5,forecast
+2025-01-23,Soups,529.9,forecast
+2025-01-23,Sour Cream,419.3,forecast
+2025-01-23,Sushi,499.8,forecast
+2025-01-23,Tilapia,415.7,forecast
+2025-01-23,Tomatoes,426.8,forecast
+2025-01-23,Tuna,410.9,forecast
+2025-01-23,Turkey,412.0,forecast
+2025-01-23,Turkey Slices,500.4,forecast
+2025-01-23,Vaccines,357.4,forecast
+2025-01-23,Wraps,512.0,forecast
+2025-01-23,Yogurt,437.6,forecast
+2025-01-24,Antibiotics,383.8,forecast
+2025-01-24,Apples,426.2,forecast
+2025-01-24,Avocados,428.5,forecast
+2025-01-24,Bagels,423.2,forecast
+2025-01-24,Bananas,433.0,forecast
+2025-01-24,Beef,422.3,forecast
+2025-01-24,Berries,404.1,forecast
+2025-01-24,Biologics,369.5,forecast
+2025-01-24,Bread,409.4,forecast
+2025-01-24,Butter,426.9,forecast
+2025-01-24,Cakes,422.8,forecast
+2025-01-24,Cheese,443.8,forecast
+2025-01-24,Chicken,440.2,forecast
+2025-01-24,Cod,861.4,forecast
+2025-01-24,Cold Brew Coffee,585.5,forecast
+2025-01-24,Cottage Cheese,399.5,forecast
+2025-01-24,Crab,426.5,forecast
+2025-01-24,Cream,435.5,forecast
+2025-01-24,Croissants,427.5,forecast
+2025-01-24,Dips,496.3,forecast
+2025-01-24,Donuts,414.1,forecast
+2025-01-24,Eye Drops,366.5,forecast
+2025-01-24,Fresh Juice,543.2,forecast
+2025-01-24,Fresh Pasta,498.6,forecast
+2025-01-24,Frozen Desserts,361.2,forecast
+2025-01-24,Frozen Dinners,350.0,forecast
+2025-01-24,Frozen Vegetables,370.2,forecast
+2025-01-24,Grapes,422.3,forecast
+2025-01-24,Ground Beef,301.9,forecast
+2025-01-24,Ham,510.2,forecast
+2025-01-24,Hummus,505.2,forecast
+2025-01-24,Ice Cream,395.7,forecast
+2025-01-24,Insulin,347.6,forecast
+2025-01-24,Kombucha,555.7,forecast
+2025-01-24,Lamb,413.5,forecast
+2025-01-24,Lettuce,409.1,forecast
+2025-01-24,Lobster,413.0,forecast
+2025-01-24,Milk,435.9,forecast
+2025-01-24,Milk Alternatives,573.7,forecast
+2025-01-24,Muffins,502.5,forecast
+2025-01-24,Pastries,425.3,forecast
+2025-01-24,Pizza,376.7,forecast
+2025-01-24,Pork,412.2,forecast
+2025-01-24,Prepared Salads,488.6,forecast
+2025-01-24,Probiotics,355.8,forecast
+2025-01-24,Salads,495.2,forecast
+2025-01-24,Salami,490.7,forecast
+2025-01-24,Salmon,409.4,forecast
+2025-01-24,Sandwiches,491.4,forecast
+2025-01-24,Sausages,414.5,forecast
+2025-01-24,Shrimp,419.6,forecast
+2025-01-24,Smoothies,568.5,forecast
+2025-01-24,Soups,529.9,forecast
+2025-01-24,Sour Cream,419.3,forecast
+2025-01-24,Sushi,499.8,forecast
+2025-01-24,Tilapia,415.7,forecast
+2025-01-24,Tomatoes,426.8,forecast
+2025-01-24,Tuna,410.9,forecast
+2025-01-24,Turkey,412.0,forecast
+2025-01-24,Turkey Slices,500.4,forecast
+2025-01-24,Vaccines,357.4,forecast
+2025-01-24,Wraps,512.0,forecast
+2025-01-24,Yogurt,437.6,forecast
+2025-01-25,Antibiotics,383.8,forecast
+2025-01-25,Apples,426.2,forecast
+2025-01-25,Avocados,428.5,forecast
+2025-01-25,Bagels,423.2,forecast
+2025-01-25,Bananas,433.0,forecast
+2025-01-25,Beef,422.3,forecast
+2025-01-25,Berries,404.1,forecast
+2025-01-25,Biologics,369.5,forecast
+2025-01-25,Bread,409.4,forecast
+2025-01-25,Butter,426.9,forecast
+2025-01-25,Cakes,422.8,forecast
+2025-01-25,Cheese,443.8,forecast
+2025-01-25,Chicken,440.2,forecast
+2025-01-25,Cod,861.4,forecast
+2025-01-25,Cold Brew Coffee,585.5,forecast
+2025-01-25,Cottage Cheese,399.5,forecast
+2025-01-25,Crab,426.5,forecast
+2025-01-25,Cream,435.5,forecast
+2025-01-25,Croissants,427.5,forecast
+2025-01-25,Dips,496.3,forecast
+2025-01-25,Donuts,414.1,forecast
+2025-01-25,Eye Drops,366.5,forecast
+2025-01-25,Fresh Juice,543.2,forecast
+2025-01-25,Fresh Pasta,498.6,forecast
+2025-01-25,Frozen Desserts,361.2,forecast
+2025-01-25,Frozen Dinners,401.9,forecast
+2025-01-25,Frozen Vegetables,403.5,forecast
+2025-01-25,Grapes,422.3,forecast
+2025-01-25,Ground Beef,301.9,forecast
+2025-01-25,Ham,510.2,forecast
+2025-01-25,Hummus,505.2,forecast
+2025-01-25,Ice Cream,395.7,forecast
+2025-01-25,Insulin,387.3,forecast
+2025-01-25,Kombucha,555.7,forecast
+2025-01-25,Lamb,413.5,forecast
+2025-01-25,Lettuce,409.1,forecast
+2025-01-25,Lobster,413.0,forecast
+2025-01-25,Milk,435.9,forecast
+2025-01-25,Milk Alternatives,573.7,forecast
+2025-01-25,Muffins,502.5,forecast
+2025-01-25,Pastries,425.3,forecast
+2025-01-25,Pizza,376.7,forecast
+2025-01-25,Pork,412.2,forecast
+2025-01-25,Prepared Salads,488.6,forecast
+2025-01-25,Probiotics,355.8,forecast
+2025-01-25,Salads,475.7,forecast
+2025-01-25,Salami,490.7,forecast
+2025-01-25,Salmon,409.4,forecast
+2025-01-25,Sandwiches,491.4,forecast
+2025-01-25,Sausages,414.6,forecast
+2025-01-25,Shrimp,419.6,forecast
+2025-01-25,Smoothies,568.5,forecast
+2025-01-25,Soups,529.9,forecast
+2025-01-25,Sour Cream,419.3,forecast
+2025-01-25,Sushi,499.8,forecast
+2025-01-25,Tilapia,415.7,forecast
+2025-01-25,Tomatoes,426.8,forecast
+2025-01-25,Tuna,410.9,forecast
+2025-01-25,Turkey,412.0,forecast
+2025-01-25,Turkey Slices,500.4,forecast
+2025-01-25,Vaccines,357.4,forecast
+2025-01-25,Wraps,512.0,forecast
+2025-01-25,Yogurt,437.6,forecast
+2025-01-26,Antibiotics,383.8,forecast
+2025-01-26,Apples,426.2,forecast
+2025-01-26,Avocados,428.5,forecast
+2025-01-26,Bagels,423.2,forecast
+2025-01-26,Bananas,433.0,forecast
+2025-01-26,Beef,422.3,forecast
+2025-01-26,Berries,404.1,forecast
+2025-01-26,Biologics,369.5,forecast
+2025-01-26,Bread,409.4,forecast
+2025-01-26,Butter,426.9,forecast
+2025-01-26,Cakes,422.8,forecast
+2025-01-26,Cheese,443.8,forecast
+2025-01-26,Chicken,440.2,forecast
+2025-01-26,Cod,861.4,forecast
+2025-01-26,Cold Brew Coffee,585.5,forecast
+2025-01-26,Cottage Cheese,399.5,forecast
+2025-01-26,Crab,426.5,forecast
+2025-01-26,Cream,435.5,forecast
+2025-01-26,Croissants,427.5,forecast
+2025-01-26,Dips,496.3,forecast
+2025-01-26,Donuts,414.1,forecast
+2025-01-26,Eye Drops,366.5,forecast
+2025-01-26,Fresh Juice,543.2,forecast
+2025-01-26,Fresh Pasta,498.6,forecast
+2025-01-26,Frozen Desserts,361.2,forecast
+2025-01-26,Frozen Dinners,388.8,forecast
+2025-01-26,Frozen Vegetables,408.0,forecast
+2025-01-26,Grapes,422.3,forecast
+2025-01-26,Ground Beef,301.9,forecast
+2025-01-26,Ham,510.2,forecast
+2025-01-26,Hummus,505.2,forecast
+2025-01-26,Ice Cream,395.7,forecast
+2025-01-26,Insulin,388.8,forecast
+2025-01-26,Kombucha,555.7,forecast
+2025-01-26,Lamb,413.5,forecast
+2025-01-26,Lettuce,409.1,forecast
+2025-01-26,Lobster,413.0,forecast
+2025-01-26,Milk,435.9,forecast
+2025-01-26,Milk Alternatives,573.7,forecast
+2025-01-26,Muffins,502.5,forecast
+2025-01-26,Pastries,425.3,forecast
+2025-01-26,Pizza,376.7,forecast
+2025-01-26,Pork,412.2,forecast
+2025-01-26,Prepared Salads,488.6,forecast
+2025-01-26,Probiotics,355.8,forecast
+2025-01-26,Salads,494.6,forecast
+2025-01-26,Salami,490.7,forecast
+2025-01-26,Salmon,409.4,forecast
+2025-01-26,Sandwiches,491.4,forecast
+2025-01-26,Sausages,414.6,forecast
+2025-01-26,Shrimp,419.6,forecast
+2025-01-26,Smoothies,568.5,forecast
+2025-01-26,Soups,529.9,forecast
+2025-01-26,Sour Cream,419.3,forecast
+2025-01-26,Sushi,499.8,forecast
+2025-01-26,Tilapia,415.7,forecast
+2025-01-26,Tomatoes,426.8,forecast
+2025-01-26,Tuna,410.9,forecast
+2025-01-26,Turkey,412.0,forecast
+2025-01-26,Turkey Slices,500.4,forecast
+2025-01-26,Vaccines,357.4,forecast
+2025-01-26,Wraps,512.0,forecast
+2025-01-26,Yogurt,437.6,forecast
+2025-01-27,Antibiotics,383.8,forecast
+2025-01-27,Apples,426.2,forecast
+2025-01-27,Avocados,428.5,forecast
+2025-01-27,Bagels,423.2,forecast
+2025-01-27,Bananas,433.0,forecast
+2025-01-27,Beef,422.3,forecast
+2025-01-27,Berries,404.1,forecast
+2025-01-27,Biologics,369.5,forecast
+2025-01-27,Bread,409.4,forecast
+2025-01-27,Butter,426.9,forecast
+2025-01-27,Cakes,422.8,forecast
+2025-01-27,Cheese,443.8,forecast
+2025-01-27,Chicken,440.2,forecast
+2025-01-27,Cod,861.4,forecast
+2025-01-27,Cold Brew Coffee,585.5,forecast
+2025-01-27,Cottage Cheese,399.5,forecast
+2025-01-27,Crab,426.5,forecast
+2025-01-27,Cream,435.5,forecast
+2025-01-27,Croissants,427.5,forecast
+2025-01-27,Dips,496.3,forecast
+2025-01-27,Donuts,414.1,forecast
+2025-01-27,Eye Drops,366.5,forecast
+2025-01-27,Fresh Juice,543.2,forecast
+2025-01-27,Fresh Pasta,498.6,forecast
+2025-01-27,Frozen Desserts,361.2,forecast
+2025-01-27,Frozen Dinners,352.5,forecast
+2025-01-27,Frozen Vegetables,387.6,forecast
+2025-01-27,Grapes,422.3,forecast
+2025-01-27,Ground Beef,301.9,forecast
+2025-01-27,Ham,510.2,forecast
+2025-01-27,Hummus,505.2,forecast
+2025-01-27,Ice Cream,395.7,forecast
+2025-01-27,Insulin,403.7,forecast
+2025-01-27,Kombucha,555.7,forecast
+2025-01-27,Lamb,413.5,forecast
+2025-01-27,Lettuce,409.1,forecast
+2025-01-27,Lobster,413.0,forecast
+2025-01-27,Milk,435.9,forecast
+2025-01-27,Milk Alternatives,573.7,forecast
+2025-01-27,Muffins,502.5,forecast
+2025-01-27,Pastries,425.3,forecast
+2025-01-27,Pizza,376.7,forecast
+2025-01-27,Pork,412.2,forecast
+2025-01-27,Prepared Salads,488.6,forecast
+2025-01-27,Probiotics,355.8,forecast
+2025-01-27,Salads,508.9,forecast
+2025-01-27,Salami,490.7,forecast
+2025-01-27,Salmon,409.4,forecast
+2025-01-27,Sandwiches,491.4,forecast
+2025-01-27,Sausages,414.5,forecast
+2025-01-27,Shrimp,419.6,forecast
+2025-01-27,Smoothies,568.5,forecast
+2025-01-27,Soups,529.9,forecast
+2025-01-27,Sour Cream,419.3,forecast
+2025-01-27,Sushi,499.8,forecast
+2025-01-27,Tilapia,415.7,forecast
+2025-01-27,Tomatoes,426.8,forecast
+2025-01-27,Tuna,410.9,forecast
+2025-01-27,Turkey,412.0,forecast
+2025-01-27,Turkey Slices,500.4,forecast
+2025-01-27,Vaccines,357.4,forecast
+2025-01-27,Wraps,512.0,forecast
+2025-01-27,Yogurt,437.6,forecast
+2025-01-28,Antibiotics,383.8,forecast
+2025-01-28,Apples,426.2,forecast
+2025-01-28,Avocados,428.5,forecast
+2025-01-28,Bagels,423.2,forecast
+2025-01-28,Bananas,433.0,forecast
+2025-01-28,Beef,422.3,forecast
+2025-01-28,Berries,404.1,forecast
+2025-01-28,Biologics,369.5,forecast
+2025-01-28,Bread,409.4,forecast
+2025-01-28,Butter,426.9,forecast
+2025-01-28,Cakes,422.8,forecast
+2025-01-28,Cheese,443.8,forecast
+2025-01-28,Chicken,440.2,forecast
+2025-01-28,Cod,861.4,forecast
+2025-01-28,Cold Brew Coffee,585.5,forecast
+2025-01-28,Cottage Cheese,399.5,forecast
+2025-01-28,Crab,426.5,forecast
+2025-01-28,Cream,435.5,forecast
+2025-01-28,Croissants,427.5,forecast
+2025-01-28,Dips,496.3,forecast
+2025-01-28,Donuts,414.1,forecast
+2025-01-28,Eye Drops,366.5,forecast
+2025-01-28,Fresh Juice,543.2,forecast
+2025-01-28,Fresh Pasta,498.6,forecast
+2025-01-28,Frozen Desserts,361.2,forecast
+2025-01-28,Frozen Dinners,346.2,forecast
+2025-01-28,Frozen Vegetables,380.8,forecast
+2025-01-28,Grapes,422.3,forecast
+2025-01-28,Ground Beef,301.9,forecast
+2025-01-28,Ham,510.2,forecast
+2025-01-28,Hummus,505.2,forecast
+2025-01-28,Ice Cream,395.7,forecast
+2025-01-28,Insulin,381.7,forecast
+2025-01-28,Kombucha,555.7,forecast
+2025-01-28,Lamb,413.5,forecast
+2025-01-28,Lettuce,409.1,forecast
+2025-01-28,Lobster,413.0,forecast
+2025-01-28,Milk,435.9,forecast
+2025-01-28,Milk Alternatives,573.7,forecast
+2025-01-28,Muffins,502.5,forecast
+2025-01-28,Pastries,425.3,forecast
+2025-01-28,Pizza,376.7,forecast
+2025-01-28,Pork,412.2,forecast
+2025-01-28,Prepared Salads,488.6,forecast
+2025-01-28,Probiotics,355.8,forecast
+2025-01-28,Salads,492.0,forecast
+2025-01-28,Salami,490.7,forecast
+2025-01-28,Salmon,409.4,forecast
+2025-01-28,Sandwiches,491.4,forecast
+2025-01-28,Sausages,414.5,forecast
+2025-01-28,Shrimp,419.6,forecast
+2025-01-28,Smoothies,568.5,forecast
+2025-01-28,Soups,529.9,forecast
+2025-01-28,Sour Cream,419.3,forecast
+2025-01-28,Sushi,499.8,forecast
+2025-01-28,Tilapia,415.7,forecast
+2025-01-28,Tomatoes,426.8,forecast
+2025-01-28,Tuna,410.9,forecast
+2025-01-28,Turkey,412.0,forecast
+2025-01-28,Turkey Slices,500.4,forecast
+2025-01-28,Vaccines,357.4,forecast
+2025-01-28,Wraps,512.0,forecast
+2025-01-28,Yogurt,437.6,forecast
+2025-01-29,Antibiotics,383.8,forecast
+2025-01-29,Apples,426.2,forecast
+2025-01-29,Avocados,428.5,forecast
+2025-01-29,Bagels,423.2,forecast
+2025-01-29,Bananas,433.0,forecast
+2025-01-29,Beef,422.3,forecast
+2025-01-29,Berries,404.1,forecast
+2025-01-29,Biologics,369.5,forecast
+2025-01-29,Bread,409.4,forecast
+2025-01-29,Butter,426.9,forecast
+2025-01-29,Cakes,422.8,forecast
+2025-01-29,Cheese,443.8,forecast
+2025-01-29,Cod,861.4,forecast
+2025-01-29,Cold Brew Coffee,585.5,forecast
+2025-01-29,Cottage Cheese,399.5,forecast
+2025-01-29,Crab,426.5,forecast
+2025-01-29,Cream,435.5,forecast
+2025-01-29,Croissants,427.5,forecast
+2025-01-29,Dips,496.3,forecast
+2025-01-29,Donuts,414.1,forecast
+2025-01-29,Eye Drops,366.5,forecast
+2025-01-29,Fresh Juice,543.2,forecast
+2025-01-29,Fresh Pasta,498.6,forecast
+2025-01-29,Frozen Desserts,361.2,forecast
+2025-01-29,Frozen Dinners,381.7,forecast
+2025-01-29,Frozen Vegetables,388.7,forecast
+2025-01-29,Grapes,422.3,forecast
+2025-01-29,Ground Beef,301.9,forecast
+2025-01-29,Ham,510.2,forecast
+2025-01-29,Hummus,505.2,forecast
+2025-01-29,Ice Cream,395.7,forecast
+2025-01-29,Insulin,392.3,forecast
+2025-01-29,Kombucha,555.7,forecast
+2025-01-29,Lamb,413.5,forecast
+2025-01-29,Lettuce,409.1,forecast
+2025-01-29,Lobster,413.0,forecast
+2025-01-29,Milk,435.9,forecast
+2025-01-29,Milk Alternatives,573.7,forecast
+2025-01-29,Muffins,502.5,forecast
+2025-01-29,Pastries,425.3,forecast
+2025-01-29,Pizza,376.7,forecast
+2025-01-29,Pork,412.2,forecast
+2025-01-29,Prepared Salads,488.6,forecast
+2025-01-29,Probiotics,355.8,forecast
+2025-01-29,Salads,492.9,forecast
+2025-01-29,Salami,490.7,forecast
+2025-01-29,Salmon,409.4,forecast
+2025-01-29,Sandwiches,491.4,forecast
+2025-01-29,Sausages,414.5,forecast
+2025-01-29,Shrimp,419.6,forecast
+2025-01-29,Smoothies,568.5,forecast
+2025-01-29,Soups,529.9,forecast
+2025-01-29,Sour Cream,419.3,forecast
+2025-01-29,Sushi,499.8,forecast
+2025-01-29,Tilapia,415.7,forecast
+2025-01-29,Tomatoes,426.8,forecast
+2025-01-29,Tuna,410.9,forecast
+2025-01-29,Turkey,412.0,forecast
+2025-01-29,Turkey Slices,500.4,forecast
+2025-01-29,Vaccines,357.4,forecast
+2025-01-29,Wraps,512.0,forecast
+2025-01-29,Yogurt,437.6,forecast
+2025-01-30,Antibiotics,383.8,forecast
+2025-01-30,Apples,426.2,forecast
+2025-01-30,Avocados,428.5,forecast
+2025-01-30,Bagels,423.2,forecast
+2025-01-30,Bananas,433.0,forecast
+2025-01-30,Beef,422.3,forecast
+2025-01-30,Berries,404.1,forecast
+2025-01-30,Biologics,369.5,forecast
+2025-01-30,Bread,409.4,forecast
+2025-01-30,Butter,426.9,forecast
+2025-01-30,Cakes,422.8,forecast
+2025-01-30,Cheese,443.8,forecast
+2025-01-30,Cod,861.4,forecast
+2025-01-30,Cold Brew Coffee,585.5,forecast
+2025-01-30,Cottage Cheese,399.5,forecast
+2025-01-30,Crab,426.5,forecast
+2025-01-30,Cream,435.5,forecast
+2025-01-30,Croissants,427.5,forecast
+2025-01-30,Dips,496.3,forecast
+2025-01-30,Donuts,414.1,forecast
+2025-01-30,Eye Drops,366.5,forecast
+2025-01-30,Fresh Juice,543.2,forecast
+2025-01-30,Fresh Pasta,498.6,forecast
+2025-01-30,Frozen Desserts,361.2,forecast
+2025-01-30,Frozen Dinners,371.5,forecast
+2025-01-30,Frozen Vegetables,385.1,forecast
+2025-01-30,Grapes,422.3,forecast
+2025-01-30,Ground Beef,301.9,forecast
+2025-01-30,Ham,510.2,forecast
+2025-01-30,Hummus,505.2,forecast
+2025-01-30,Ice Cream,395.7,forecast
+2025-01-30,Insulin,384.0,forecast
+2025-01-30,Kombucha,555.7,forecast
+2025-01-30,Lamb,413.5,forecast
+2025-01-30,Lettuce,409.1,forecast
+2025-01-30,Lobster,413.0,forecast
+2025-01-30,Milk,435.9,forecast
+2025-01-30,Muffins,502.5,forecast
+2025-01-30,Pastries,425.3,forecast
+2025-01-30,Pizza,376.7,forecast
+2025-01-30,Pork,412.2,forecast
+2025-01-30,Prepared Salads,488.6,forecast
+2025-01-30,Probiotics,355.8,forecast
+2025-01-30,Salami,490.7,forecast
+2025-01-30,Salmon,409.4,forecast
+2025-01-30,Sandwiches,491.4,forecast
+2025-01-30,Sausages,414.5,forecast
+2025-01-30,Shrimp,419.6,forecast
+2025-01-30,Smoothies,568.5,forecast
+2025-01-30,Soups,529.9,forecast
+2025-01-30,Sour Cream,419.3,forecast
+2025-01-30,Sushi,499.8,forecast
+2025-01-30,Tilapia,415.7,forecast
+2025-01-30,Tomatoes,426.8,forecast
+2025-01-30,Tuna,410.9,forecast
+2025-01-30,Turkey,412.0,forecast
+2025-01-30,Turkey Slices,500.4,forecast
+2025-01-30,Wraps,512.0,forecast
+2025-01-30,Yogurt,437.6,forecast

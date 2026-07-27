@@ -134,3 +134,31 @@ combined = pd.concat(
 )
 
 combined.to_csv(r'../data/product_ts.csv', index=False)
+
+#wasted product analysis
+waste_df = pg_df[['record_id', 'spoilage_risk','temp_deviation','storage_temp','spoilage_sensitivity','temp_abuse_events','distribution_hours', 'handling_score', 'packaging_score',
+       'was_spoiled', 'quality_grade', 'days_until_expiry']].copy()
+## give quality grades a numeric value for correlation analysis
+quality_mapping = {'A': 3, 'B': 2, 'C':1}
+waste_df['quality_grade'] = waste_df['quality_grade'].map(quality_mapping)
+## turn product_id into index
+waste_df.set_index('record_id', inplace=True)
+
+corr_matrix = waste_df.corr(method='spearman')  # 'pearson', 'spearman', or 'kendall'
+print(corr_matrix)
+# Visualize as heatmap
+plt.figure(figsize=(8, 6))
+sns.heatmap(
+    corr_matrix,
+    annot=True,        # show correlation values
+    fmt=".2f",
+    cmap="coolwarm",
+    vmin=-1, vmax=1,
+    square=True,
+    linewidths=0.5
+)
+plt.title("Correlation Matrix")
+plt.tight_layout()
+plt.show()
+
+corr_matrix.to_csv(r'../data/correlation_matrix.csv')
